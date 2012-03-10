@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/cygdrive/c/yasudir'
+let g:netrw_dirhist_2='/cygdrive/c/yasudir/aws'
+let g:netrw_dirhist_3='/cygdrive/c/yasudir'
+let g:netrw_dirhist_4='/cygdrive/c/yasudir/git_repos'
+let g:netrw_dirhist_5='/cygdrive/c/yasudir'
