@@ -2,9 +2,20 @@
 " --- 基本 ---
 " ------------------------------------------------------
 "Vi互換をオフ
-"set nocompatible
+set nocompatible
+"文字コード（エンコーディング）
+set encoding=utf-8
+set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 "シンタックスハイライトを有効にする
-syntax enable
+syntax on
+
+" ------------------------------------------------------
+" --- マウス操作 ---
+" ------------------------------------------------------
+"マウス操作の有効化
+set mouse=a
+"screen経由でもマウスを有効化
+set ttymouse=xterm2
 
 " ------------------------------------------------------
 " --- カーソル移動 ---
@@ -20,6 +31,7 @@ set number
 "新しい行のインデントを現在行と同じにする
 set autoindent
 "バックスペースでインデントや改行を削除できるようにする
+"indent:行頭の空白, eol:改行, start:挿入モード開始位置より手前の文字
 set backspace=indent,eol,start
 "タブの文字数(タブストップ)を設定する
 set tabstop=4
@@ -47,6 +59,12 @@ set nowrapscan
 " ------------------------------------------------------
 " --- 見た目 ---
 " ------------------------------------------------------
+"タイトルをウィンドウ枠に表示する
+set title
+"ルーラーを表示する
+set ruler
+"カーソル行の強調表示
+"set cursorline
 "タブ文字、行末など不可視文字を表示する
 "set list
 "listで表示される文字のフォーマットを指定する
@@ -59,10 +77,18 @@ set nowrapscan
 set wildmenu
 "ステータスラインに表示される文字を変更する
 "set statusline=%F%M%R%=code:%B%H%W
+"常にステータスラインを表示
+set laststatus=2
+"コマンドをステータスラインに表示
+set showcmd
 
 " ------------------------------------------------------
 " --- バックアップ ---
 " ------------------------------------------------------
+"バックアップをとらない
+"set nobackup
+"バックアップをとる
+set backup
 "バックアップファイルの作られるディレクトリを指定する
 set backupdir=$HOME/backup/vim
 set backupext=.back
@@ -84,4 +110,35 @@ set showmatch
 set matchtime=3
 "目的の関数へタグジャンプをする
 "set tags=./tags,/usr/src/tags
+"カレントディレクトリから親ディレクトリを遡ってtagsファイルを検索する
+set tags+=tags;
+"逆に、カレントディレクトリ以下を再帰的に検索する
+"set tags+=./**/tags
+
+" ------------------------------------------------------
+" --- オリジナルキーマップ ---
+" ------------------------------------------------------
+"ESCで挿入モードを抜けるときにIMEもオフにする
+inoremap <ESC> <ESC>:set iminsert=0<CR>					"うまくいかない
+"スペースキーでスクロールできるようにする
+nnoremap <Space> jzz
+nnoremap <S-Space> kzz
+"ノーマルモードでEnterキーを押したときに、改行する
+"nnoremap <CR> s-o<ESC>									"うまくいかない
+"Ctrl+Tab, Ctrl+Shift+Tabでタブ切り替え
+nnoremap <C-Tab> gt										"うまくいかない
+nnoremap <C-S-Tab> gT									"うまくいかない
+"vimgrepで自動的にQuickWindowsを開く
+au QuickfixCmdPost vimgrep cw
+
+" ------------------------------------------------------
+" --- プラグイン用設定 ---
+" ------------------------------------------------------
+" -----------------------------
+" --- for NERDTree ---
+" -----------------------------
+"隠しファイルを表示する
+let NERDTreeShowHidden=1
+"カーソル行を強調表示しない
+let NERDTreeHighlightCursorline=0
 
