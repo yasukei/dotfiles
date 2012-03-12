@@ -111,7 +111,7 @@ set matchtime=3
 "目的の関数へタグジャンプをする
 "set tags=./tags,/usr/src/tags
 "カレントディレクトリから親ディレクトリを遡ってtagsファイルを検索する
-set tags+=tags;
+set tags+=./tags;
 "逆に、カレントディレクトリ以下を再帰的に検索する
 "set tags+=./**/tags
 
