@@ -66,9 +66,9 @@ set ruler
 "カーソル行の強調表示
 "set cursorline
 "タブ文字、行末など不可視文字を表示する
-"set list
+set list
 "listで表示される文字のフォーマットを指定する
-"set listchars=eol:$,tab:>\ ,extends:<
+set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 
 " ------------------------------------------------------
 " --- コマンドライン ---
@@ -105,9 +105,9 @@ let &directory=&backupdir
 " --- プログラミング支援 ---
 " ------------------------------------------------------
 "括弧の入力時にカーソルを対応する括弧の上に一定時間表示させる
-set showmatch
+"set showmatch
 "このオプションの値が、マッチした括弧の始めを表示する時間(1/10秒)になる
-set matchtime=3
+"set matchtime=1
 "目的の関数へタグジャンプをする
 "set tags=./tags,/usr/src/tags
 "カレントディレクトリから親ディレクトリを遡ってtagsファイルを検索する
@@ -122,7 +122,7 @@ set tags+=./tags;
 inoremap <ESC> <ESC>:set iminsert=0<CR>					"うまくいかない
 "スペースキーでスクロールできるようにする
 nnoremap <Space> jzz
-nnoremap <S-Space> kzz
+nnoremap <S-Space> kzz									"うまくいかない
 "ノーマルモードでEnterキーを押したときに、改行する
 "nnoremap <CR> s-o<ESC>									"うまくいかない
 "Ctrl+Tab, Ctrl+Shift+Tabでタブ切り替え
