@@ -8,6 +8,8 @@ set encoding=utf-8
 set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 "シンタックスハイライトを有効にする
 syntax on
+"カラースキーマの設定
+colorscheme darkblue
 
 " ------------------------------------------------------
 " --- マウス操作 ---
@@ -64,11 +66,16 @@ set title
 "ルーラーを表示する
 set ruler
 "カーソル行の強調表示
-"set cursorline
+set cursorline
 "タブ文字、行末など不可視文字を表示する
 set list
 "listで表示される文字のフォーマットを指定する
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+
+" ------------------------------------------------------
+" --- フォント設定 ---
+" ------------------------------------------------------
+
 
 " ------------------------------------------------------
 " --- コマンドライン ---
@@ -86,14 +93,14 @@ set showcmd
 " --- バックアップ ---
 " ------------------------------------------------------
 "バックアップをとらない
-"set nobackup
+set nobackup
 "バックアップをとる
-set backup
+"set backup
 "バックアップファイルの作られるディレクトリを指定する
-set backupdir=$HOME/backup/vim
-set backupext=.back
+"set backupdir=$HOME/backup/vim
+"set backupext=.back
 "スワップファイルが作られるディレクトリを指定する
-let &directory=&backupdir
+"let &directory=&backupdir
 
 " ------------------------------------------------------
 " --- ファイル・ディレクトリ操作 ---
@@ -119,15 +126,15 @@ set tags+=./tags;
 " --- オリジナルキーマップ ---
 " ------------------------------------------------------
 "ESCで挿入モードを抜けるときにIMEもオフにする
-inoremap <ESC> <ESC>:set iminsert=0<CR>					"うまくいかない
+inoremap <ESC> <ESC>:set iminsert=0<CR>
 "スペースキーでスクロールできるようにする
 nnoremap <Space> jzz
-nnoremap <S-Space> kzz									"うまくいかない
+nnoremap <S-Space> kzz
 "ノーマルモードでEnterキーを押したときに、改行する
 "nnoremap <CR> s-o<ESC>									"うまくいかない
 "Ctrl+Tab, Ctrl+Shift+Tabでタブ切り替え
-nnoremap <C-Tab> gt										"うまくいかない
-nnoremap <C-S-Tab> gT									"うまくいかない
+nnoremap <C-Tab> gt
+nnoremap <C-S-Tab> gT
 "vimgrepで自動的にQuickWindowsを開く
 au QuickfixCmdPost vimgrep cw
 
@@ -138,7 +145,7 @@ au QuickfixCmdPost vimgrep cw
 " --- for NERDTree ---
 " -----------------------------
 "隠しファイルを表示する
-let NERDTreeShowHidden=1
+"let NERDTreeShowHidden=1
 "カーソル行を強調表示しない
-let NERDTreeHighlightCursorline=0
+"let NERDTreeHighlightCursorline=0
 
