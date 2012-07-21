@@ -7,4 +7,5 @@ colorscheme darkblue
 set columns=120
 " ウインドウの高さ
 set lines=45
-"
+"ESCを押したときのビープ音を消す
+set visualbell t_vb=

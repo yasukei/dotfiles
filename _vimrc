@@ -131,7 +131,7 @@ inoremap <ESC> <ESC>:set iminsert=0<CR>
 nnoremap <Space> jzz
 nnoremap <S-Space> kzz
 "ノーマルモードでEnterキーを押したときに、改行する
-"nnoremap <CR> s-o<ESC>									"うまくいかない
+nnoremap <CR> o<ESC>
 "Ctrl+Tab, Ctrl+Shift+Tabでタブ切り替え
 nnoremap <C-Tab> gt
 nnoremap <C-S-Tab> gT
@@ -141,11 +141,4 @@ au QuickfixCmdPost vimgrep cw
 " ------------------------------------------------------
 " --- プラグイン用設定 ---
 " ------------------------------------------------------
-" -----------------------------
-" --- for NERDTree ---
-" -----------------------------
-"隠しファイルを表示する
-"let NERDTreeShowHidden=1
-"カーソル行を強調表示しない
-"let NERDTreeHighlightCursorline=0
 
