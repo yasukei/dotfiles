@@ -35,6 +35,14 @@ set lines=90
 set cursorline
 set number
 set tabstop=4
+set shiftwidth=4
+
+"set autoindent
+"set smartindent
+"set cindent
+
+set guioptions-=m
+set guioptions-=T
 
 colorscheme desert
 
