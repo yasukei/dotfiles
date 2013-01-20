@@ -1,69 +1,13 @@
-"-------------------------------------------------
-" Cheat sheet
-"-------------------------------------------------
-"
-" change current directory
-"	:cd %:h
-"
-" past yank data in command buffer
-"	<Ctrl-r>"
-"
-" vimgrep with quickfix
-"	:vimgrep hoge    **/*.txt | cw
-"	:vimgrep /hoge/j **/*.txt | cw
-"	
-"	:cp (cprev)
-"	:cn (cnext)
-"	:cw (open quickfix window)
-"	:ccl (close quickfix window)
-"
-" word complement in insert-mode
-" 	<Ctrl-p>
-" 	<Ctrl-n>
 
 "-------------------------------------------------
 " General
 "-------------------------------------------------
-set fileencoding=utf-8
-set fileformat=unix
-
 set guifont=MS_Gothic:h9
 
 set columns=180
 set lines=90
 
-set cursorline
-set number
-set tabstop=4
-set shiftwidth=4
-
-"set autoindent
-"set smartindent
-"set cindent
-
 set guioptions-=m
 set guioptions-=T
 
-colorscheme desert
-
-"-------------------------------------------------
-" Search
-"-------------------------------------------------
-set ignorecase
-set smartcase
-set incsearch
-set hlsearch
-set nowrapscan
-
-"-------------------------------------------------
-" Backup
-"-------------------------------------------------
-set nobackup
-set noswapfile
-
-"-------------------------------------------------
-" ctags
-"-------------------------------------------------
-set tags+=./tags;
-
-
+colorscheme darkblue
