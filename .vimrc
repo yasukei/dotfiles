@@ -78,9 +78,11 @@ set tags+=./tags;
 "-------------------------------------------------
 map <C-g> :Gtags 
 map <C-h> :Gtags -f %<CR>
-map <C-j> :GtagsCursor<CR>
-"map <C-n> :cn<CR>
-"map <C-p> :cp<CR>
+"map <C-j> :GtagsCursor<CR>
+map <C-j> :Gtags <C-r><C-w><CR>
+map <C-k> :Gtags -r <C-r><C-w><CR>
+map <C-n> :cn<CR>
+map <C-p> :cp<CR>
 
 "-------------------------------------------------
 " vundle
@@ -105,6 +107,7 @@ Bundle 'Lokaltog/vim-easymotion'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+Bundle 'molokai'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 " ...
@@ -133,6 +136,6 @@ let g:EasyMotion_leader_key = '<Leader>'
 "-------------------------------------------------
 " FuzzyFinder
 "-------------------------------------------------
-nnoremap [MyPrefix]f	:<C-u>FufFile **/<CR>
+nnoremap [MyPrefix]f	:<C-u>FufFile<CR>
 nnoremap [MyPrefix]b	:<C-u>FufBuffer<CR>
 
