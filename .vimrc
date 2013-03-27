@@ -108,7 +108,6 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'molokai'
-Bundle 'gtags.vim'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 " ...
