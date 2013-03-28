@@ -127,11 +127,7 @@ filetype plugin indent on     " required!
 "-------------------------------------------------
 let g:EasyMotion_leader_key = '<Leader>'
 " <Leader> means \ key
-" commands
-"  <Leader>w
-"  <Leader>e
-"  <Leader>b
-"  <Leader>ge
+let g:EasyMotion_keys = 'asdfghjklqwertyuiopzxcvbnmASDFGHJKLQWERTYUIOPZXCVBNM'
 
 "-------------------------------------------------
 " FuzzyFinder
