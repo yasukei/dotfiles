@@ -1,0 +1,5 @@
+[user]
+	name = Kei Yasuda
+	email = to.yasuda.kei@gmail.com
+[alias]
+	dlog = log --pretty=format:\"%d [%h] \"%s\"\" --graph
