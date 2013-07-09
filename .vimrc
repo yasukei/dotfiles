@@ -29,7 +29,7 @@ set laststatus=2
 "set statusline +=%2*0x%04B\ %*          "character under cursor
 
 syntax on
-colorscheme darkblue
+colorscheme desert
 
 set tabstop=4
 set shiftwidth=4
@@ -107,7 +107,6 @@ Bundle 'Lokaltog/vim-easymotion'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
-Bundle 'molokai'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 " ...
