@@ -4,7 +4,7 @@
 "-------------------------------------------------
 set nocompatible
 
-set fileencoding=utf-8
+set fileencodings=iso-2022-jp,euc-jp,cp932,ucs-bom,utf-8,default,latin1
 set fileformat=unix
 
 set cursorline
@@ -29,7 +29,7 @@ set laststatus=2
 "set statusline +=%2*0x%04B\ %*          "character under cursor
 
 syntax on
-colorscheme delek
+colorscheme desert
 
 set tabstop=4
 set shiftwidth=4
