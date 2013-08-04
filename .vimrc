@@ -29,7 +29,7 @@ set laststatus=2
 "set statusline +=%2*0x%04B\ %*          "character under cursor
 
 syntax on
-colorscheme desert
+colorscheme delek
 
 set tabstop=4
 set shiftwidth=4
