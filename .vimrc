@@ -17,9 +17,10 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-repeat'
 Bundle 'Lokaltog/vim-easymotion'
-
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+Bundle 'quickhl.vim'
+Bundle 'gtags.vim'
 
 Bundle 'Lokaltog/vim-distinguished'
 Bundle 'nanotech/jellybeans.vim'
@@ -54,6 +55,25 @@ let g:EasyMotion_keys = 'asdfghjklqwertyuiopzxcvbnmASDFGHJKLQWERTYUIOPZXCVBNM'
 nnoremap [MyPrefix]f	:<C-u>FufFile<CR>
 nnoremap [MyPrefix]b	:<C-u>FufBuffer<CR>
 
+"-------------------------------------------------
+" quickhl
+"-------------------------------------------------
+nmap <Space>m <Plug>(quickhl-toggle)
+xmap <Space>m <Plug>(quickhl-toggle)
+nmap <Space>M <Plug>(quickhl-reset)
+xmap <Space>M <Plug>(quickhl-reset)
+nmap <Space>j <Plug>(quickhl-match)
+
+"-------------------------------------------------
+" gtags
+"-------------------------------------------------
+map <C-g> :Gtags 
+map <C-h> :Gtags -f %<CR>
+"map <C-j> :GtagsCursor<CR>
+map <C-j> :Gtags <C-r><C-w><CR>
+map <C-k> :Gtags -r <C-r><C-w><CR>
+map <C-n> :cn<CR>
+map <C-p> :cp<CR>
 
 "-------------------------------------------------
 "" General
@@ -119,15 +139,4 @@ noremap!  
 " ctags
 "-------------------------------------------------
 set tags+=./tags;
-
-"-------------------------------------------------
-" gtags
-"-------------------------------------------------
-map <C-g> :Gtags 
-map <C-h> :Gtags -f %<CR>
-"map <C-j> :GtagsCursor<CR>
-map <C-j> :Gtags <C-r><C-w><CR>
-map <C-k> :Gtags -r <C-r><C-w><CR>
-map <C-n> :cn<CR>
-map <C-p> :cp<CR>
 
