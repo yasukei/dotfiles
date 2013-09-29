@@ -17,10 +17,10 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-repeat'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 't9md/vim-quickhl'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
-Bundle 'quickhl.vim'
-Bundle 'gtags.vim'
+"Bundle 'gtags.vim' " install manually gtags.vim version 0.6.4 or later from GNU GLOBAL share directory
 
 Bundle 'Lokaltog/vim-distinguished'
 Bundle 'nanotech/jellybeans.vim'
@@ -74,6 +74,18 @@ map <C-j> :Gtags <C-r><C-w><CR>
 map <C-k> :Gtags -r <C-r><C-w><CR>
 map <C-n> :cn<CR>
 map <C-p> :cp<CR>
+
+"-------------------------------------------------
+" qfixhowm
+"-------------------------------------------------
+"set runtimepath+=~/.vim/qfixapp
+"let QFixHowm_key		= 'g'
+"let howm_dir			= '~/howm'
+"let howm_filename		= '%Y/%m/%Y-%m-%d-%H%M%s.txt'
+"let howm_fileencoding	= 'utf-8'
+"let howm_fileformat		= 'unix'
+"
+"let QFixHowm_FileType	= 'qfix_memo'
 
 "-------------------------------------------------
 "" General
