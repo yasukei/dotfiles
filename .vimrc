@@ -20,6 +20,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 't9md/vim-quickhl'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+Bundle 'itchyny/lightline.vim'
 "Bundle 'gtags.vim' " install manually gtags.vim version 0.6.4 or later from GNU GLOBAL share directory
 
 Bundle 'Lokaltog/vim-distinguished'
@@ -43,37 +44,74 @@ filetype plugin indent on     " required!
 " NOTE: comments after Bundle command are not allowed..
 
 "-------------------------------------------------
-" easymotion
+" Lokaltog/vim-easymotion
 "-------------------------------------------------
 let g:EasyMotion_leader_key = '<Leader>'
 " <Leader> means \ key
 let g:EasyMotion_keys = 'asdfghjklqwertyuiopzxcvbnmASDFGHJKLQWERTYUIOPZXCVBNM'
 
 "-------------------------------------------------
-" FuzzyFinder
+" t9md/vim-quickhl
 "-------------------------------------------------
-nnoremap [MyPrefix]f	:<C-u>FufFile<CR>
-nnoremap [MyPrefix]b	:<C-u>FufBuffer<CR>
+nmap [MyPrefix]h <Plug>(quickhl-manual-this)
+xmap [MyPrefix]h <Plug>(quickhl-manual-this)
+nmap [MyPrefix]H <Plug>(quickhl-manual-reset)
+xmap [MyPrefix]H <Plug>(quickhl-manual-reset)
+nmap [MyPrefix]w <Plug>(quickhl-cword-toggle)
 
 "-------------------------------------------------
-" quickhl
+" FuzzyFinder
 "-------------------------------------------------
-nmap <Space>m <Plug>(quickhl-toggle)
-xmap <Space>m <Plug>(quickhl-toggle)
-nmap <Space>M <Plug>(quickhl-reset)
-xmap <Space>M <Plug>(quickhl-reset)
-nmap <Space>j <Plug>(quickhl-match)
+"nnoremap [MyPrefix]f	:<C-u>FufFile<CR>
+"nnoremap [MyPrefix]b	:<C-u>FufBuffer<CR>
+let g:fuf_modesDisable = []
+let g:fuf_mrufile_maxItem = 400
+let g:fuf_mrucmd_maxItem = 400
+nnoremap [MyPrefix]b		:FufBuffer<CR>
+nnoremap [MyPrefix]f		:FufFile<CR>
+nnoremap [MyPrefix]F		:FufFileWithCurrentBufferDir<CR>
+nnoremap [MyPrefix]d		:FufDir<CR>
+nnoremap [MyPrefix]D		:FufDirWithCurrentBufferDir<CR>
+nnoremap [MyPrefix]mf		:FufMruFile<CR>
+nnoremap [MyPrefix]mc		:FufMruCmd<CR>
+nnoremap [MyPrefix]cf		:FufCoverageFileChange<CR>
+nnoremap [MyPrefix]cF		:FufCoverageFileRegister<CR>
+nnoremap [MyPrefix]vf		:FufBookmarkFile<CR>
+nnoremap [MyPrefix]vF		:FufBookmarkFileAdd<CR>
+nnoremap [MyPrefix]vd		:FufBookmarkDir<CR>
+nnoremap [MyPrefix]vD		:FufBookmarkDirAdd<CR>
+nnoremap [MyPrefix]j		:FufJumpList<CR>
+nnoremap [MyPrefix]q		:FufQuickfix<CR>
+nnoremap [MyPrefix]<C-r>	:FufRenewCache<CR>
+
+"-------------------------------------------------
+" itchyny/lightline.vim
+"-------------------------------------------------
+let g:lightline = {
+	\ 'colorscheme': 'wombat',
+	\ }
+let g:lightline.component = {
+	\ 'filename': '%f',
+	\ 'lineinfo': '%3l/%L:%-2v',
+	\ }
+let g:lightline.active = {
+	\ 'left': [ [ 'mode', 'paste' ],
+	\           [ 'readonly', 'filename', 'modified' ] ],
+	\ 'right': [ [ 'lineinfo' ],
+	\            [ 'percent' ],
+	\            [ 'fileformat', 'fileencoding', 'filetype' ] ] }
+let g:lightline.inactive = g:lightline.active
 
 "-------------------------------------------------
 " gtags
 "-------------------------------------------------
-map <C-g> :Gtags 
-map <C-h> :Gtags -f %<CR>
-"map <C-j> :GtagsCursor<CR>
-map <C-j> :Gtags <C-r><C-w><CR>
-map <C-k> :Gtags -r <C-r><C-w><CR>
-map <C-n> :cn<CR>
-map <C-p> :cp<CR>
+noremap <C-g> :Gtags 
+noremap <C-h> :Gtags -f %<CR>
+"noremap <C-j> :GtagsCursor<CR>
+noremap <C-j> :Gtags <C-r><C-w><CR>
+noremap <C-k> :Gtags -r <C-r><C-w><CR>
+noremap <C-n> :cn<CR>
+noremap <C-p> :cp<CR>
 
 "-------------------------------------------------
 " qfixhowm
@@ -102,6 +140,7 @@ set nolist
 set wrap
 
 set title
+set showmode
 set wildmenu
 set cmdheight=2
 set laststatus=2
