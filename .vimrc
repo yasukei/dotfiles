@@ -130,7 +130,7 @@ noremap <C-p> :cp<CR>
 "-------------------------------------------------
 set nocompatible
 
-set fileencodings=iso-2022-jp,euc-jp,cp932,ucs-bom,utf-8,default,latin1
+"set fileencodings=iso-2022-jp,euc-jp,cp932,ucs-bom,utf-8,default,latin1
 set fileformat=unix
 
 set cursorline
@@ -147,7 +147,7 @@ set laststatus=2
 
 syntax on
 set t_Co=256
-colorscheme distinguished
+colorscheme hybrid
 
 set tabstop=4
 set shiftwidth=4
@@ -157,6 +157,12 @@ set backspace=indent,eol,start
 set autoindent
 set smartindent
 set cindent
+
+set foldmethod=indent
+set foldlevel=3
+"set foldcolumn=2
+" zR: open all, zo: open, zO: open recursively
+" zM: close all, zc: close, zC: close recursively
 
 if has('mouse')
 	set mouse=a
