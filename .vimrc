@@ -93,8 +93,11 @@ nnoremap [MyPrefix]<C-r>	:FufRenewCache<CR>
 "-------------------------------------------------
 " itchyny/lightline.vim
 "-------------------------------------------------
+"let g:lightline = {
+"	\ 'colorscheme': 'wombat',
+"	\ }
 let g:lightline = {
-	\ 'colorscheme': 'wombat',
+	\ 'colorscheme': 'solarized',
 	\ }
 let g:lightline.component = {
 	\ 'filename': '%f',
@@ -153,7 +156,7 @@ set laststatus=2
 
 syntax on
 set t_Co=256
-colorscheme hybrid
+colorscheme hybrid-light
 
 set tabstop=4
 set shiftwidth=4
