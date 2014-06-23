@@ -4,6 +4,13 @@
 " vimdiff
 "   do, dp: diff obtain, diff put
 "   [c, ]c: prev diff, next diff
+"
+" edit file or directory
+"   :e %:p
+"   :e %:h
+"
+" re-select selected visual area
+"   gv
 
 "-------------------------------------------------
 " vundle
@@ -28,6 +35,7 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'itchyny/lightline.vim'
 "Bundle 'gtags.vim' " install manually gtags.vim version 0.6.4 or later from GNU GLOBAL share directory
+Bundle 'thinca/vim-quickrun'
 
 Bundle 'Lokaltog/vim-distinguished'
 Bundle 'nanotech/jellybeans.vim'
@@ -123,6 +131,17 @@ noremap <C-n> :cn<CR>
 noremap <C-p> :cp<CR>
 
 "-------------------------------------------------
+" QuickRun
+"-------------------------------------------------
+"noremap <C-r><C-r> :QuickRun ruby<CR>
+"let g:quickrun_config["_"] = {
+"    \ "outputter/buffer/split" : ":rightbelow 8sp",
+"    \ "outputter/error/error" : "quickfix",
+"    \ "outputter/error/success" : "quickfix",
+"    \ "outputter" : "error",
+"	\ }
+
+"-------------------------------------------------
 " qfixhowm
 "-------------------------------------------------
 "set runtimepath+=~/.vim/qfixapp
@@ -153,6 +172,7 @@ set showmode
 set wildmenu
 set cmdheight=2
 set laststatus=2
+set history=200
 
 syntax on
 set t_Co=256
