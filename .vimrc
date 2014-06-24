@@ -11,6 +11,14 @@
 "
 " re-select selected visual area
 "   gv
+"
+" go-back to last edit
+"   g;	go back
+"   g,	go forward
+"
+" open command line window
+"   q:
+"
 
 "-------------------------------------------------
 " vundle
