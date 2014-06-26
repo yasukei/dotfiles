@@ -19,6 +19,10 @@
 " open command line window
 "   q:
 "
+" show each register's content
+"   :registers
+"   :reg
+"
 
 "-------------------------------------------------
 " vundle
