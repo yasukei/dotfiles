@@ -52,7 +52,7 @@ Bundle 'thinca/vim-quickrun'
 Bundle 'Lokaltog/vim-distinguished'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'w0ng/vim-hybrid'
-Bundle 'tomasr/molokai'
+Bundle 'yasukei/vim-colors'
 
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
@@ -189,7 +189,7 @@ set history=200
 
 syntax on
 set t_Co=256
-colorscheme hybrid-light
+colorscheme no_quarter
 
 set tabstop=4
 set shiftwidth=4
