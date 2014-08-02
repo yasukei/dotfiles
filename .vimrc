@@ -146,13 +146,14 @@ noremap <C-p> :cp<CR>
 "-------------------------------------------------
 " QuickRun
 "-------------------------------------------------
-"noremap <C-r><C-r> :QuickRun ruby<CR>
-"let g:quickrun_config["_"] = {
-"    \ "outputter/buffer/split" : ":rightbelow 8sp",
-"    \ "outputter/error/error" : "quickfix",
-"    \ "outputter/error/success" : "quickfix",
-"    \ "outputter" : "error",
-"	\ }
+"let g:quickrun_config = {
+"\	"_" : {
+"\		"outputter/buffer/split" : "rightbelow 8sp",
+"\		"outputter/error/error" : "quickfix",
+"\		"outputter/error/success" : "quickfix",
+"\		"outputter" : "error",
+"\	},
+"\}
 
 "-------------------------------------------------
 " qfixhowm
@@ -196,9 +197,9 @@ set shiftwidth=4
 set noexpandtab
 set backspace=indent,eol,start
 
-set autoindent
+"set autoindent
 set smartindent
-set cindent
+"set cindent
 
 set foldmethod=indent
 set foldlevel=3
@@ -238,4 +239,13 @@ noremap!  
 " ctags
 "-------------------------------------------------
 set tags+=./tags;
+
+"-------------------------------------------------
+" Go
+"-------------------------------------------------
+set rtp+=$GOROOT/misc/vim
+auto BufWritePre *.go Fmt
+
+" go get github.com/nsf/gocode/
+exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
 
