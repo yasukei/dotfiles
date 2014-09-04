@@ -207,6 +207,8 @@ set foldlevel=3
 " zR: open all, zo: open, zO: open recursively
 " zM: close all, zc: close, zC: close recursively
 
+"set clipboard+=unnamed
+
 if has('mouse')
 	set mouse=a
 endif

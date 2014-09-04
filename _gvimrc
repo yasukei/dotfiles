@@ -2,7 +2,7 @@
 "-------------------------------------------------
 " General
 "-------------------------------------------------
-set guifont=MS_Gothic:h9
+set guifont=MS_Gothic:h12
 
 set columns=180
 set lines=90
@@ -10,4 +10,4 @@ set lines=90
 set guioptions-=m
 set guioptions-=T
 
-colorscheme darkblue
+colorscheme no_quarter
