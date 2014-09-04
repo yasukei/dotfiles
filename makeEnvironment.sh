@@ -25,6 +25,8 @@
 # sudo apt-get install vim
 # 
 # sudo apt-get install gnome-do
+# sudo apt-get install byobu
+# sudo apt-get install silversearcher-ag
 # sudo apt-get install chromium-browser
 
 # for Spin's make

@@ -48,6 +48,7 @@ Bundle 'FuzzyFinder'
 Bundle 'itchyny/lightline.vim'
 "Bundle 'gtags.vim' " install manually gtags.vim version 0.6.4 or later from GNU GLOBAL share directory
 Bundle 'thinca/vim-quickrun'
+Bundle 'rking/ag.vim'
 
 Bundle 'Lokaltog/vim-distinguished'
 Bundle 'nanotech/jellybeans.vim'
