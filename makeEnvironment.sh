@@ -28,6 +28,9 @@
 # sudo apt-get install byobu
 # sudo apt-get install silversearcher-ag
 # sudo apt-get install chromium-browser
+# sudo apt-get install mozc-utils-gui
+# sudo apt-get install ibus-mozc
+# sudo apt-get install g++
 
 # for Spin's make
 # sudo apt-get install bison
