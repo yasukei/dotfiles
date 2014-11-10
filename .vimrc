@@ -49,8 +49,9 @@ Bundle 'itchyny/lightline.vim'
 "Bundle 'gtags.vim' " install manually gtags.vim version 0.6.4 or later from GNU GLOBAL share directory
 Bundle 'thinca/vim-quickrun'
 Bundle 'rking/ag.vim'
+Bundle 'vcscommand.vim'
 
-Bundle 'Lokaltog/vim-distinguished'
+" colorscheme
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'w0ng/vim-hybrid'
 Bundle 'yasukei/vim-colors'
@@ -191,7 +192,7 @@ set history=200
 
 syntax on
 set t_Co=256
-colorscheme no_quarter
+colorscheme hybrid
 
 set tabstop=4
 set shiftwidth=4
