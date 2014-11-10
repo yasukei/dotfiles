@@ -25,52 +25,70 @@
 "
 
 "-------------------------------------------------
-" vundle
+" NeoBundle
 "-------------------------------------------------
-set nocompatible               " be iMproved
-filetype off                   " required!
+if has('vim_starting')
+  set nocompatible               " Be iMproved
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/Vundle.vim'
+" Required:
+call neobundle#begin(expand('~/.vim/bundle'))
 
-" My Bundles here:
-"
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-repeat'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 't9md/vim-quickhl'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'itchyny/lightline.vim'
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Add or remove your Bundles here:
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'Shougo/vimproc.vim', {
+			\ 'build' : {
+			\     'windows' : 'tools\\update-dll-mingw',
+			\     'cygwin' : 'make -f make_cygwin.mak',
+			\     'mac' : 'make -f make_mac.mak',
+			\     'linux' : 'make',
+			\     'unix' : 'gmake',
+			\    },
+			\ }
+
+"NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'tpope/vim-fugitive'
+"NeoBundle 'tpope/vim-repeat'
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 't9md/vim-quickhl'
+"NeoBundle 'L9'
+"NeoBundle 'FuzzyFinder'
+NeoBundle 'itchyny/lightline.vim'
 "Bundle 'gtags.vim' " install manually gtags.vim version 0.6.4 or later from GNU GLOBAL share directory
-Bundle 'thinca/vim-quickrun'
-Bundle 'rking/ag.vim'
-Bundle 'vcscommand.vim'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'rking/ag.vim'
+"NeoBundle 'vcscommand.vim'
 
 " colorscheme
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'w0ng/vim-hybrid'
-Bundle 'yasukei/vim-colors'
+NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'yasukei/vim-colors'
 
-" non github repos
-"Bundle 'git://git.wincent.com/command-t.git'
-" ...
+" You can specify revision/branch/tag.
+"NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
-call vundle#end()
-filetype plugin indent on     " required!
-"
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
+" Required:
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+"End NeoBundle Scripts-------------------------
+
 
 "-------------------------------------------------
 " Lokaltog/vim-easymotion
@@ -89,29 +107,47 @@ xmap [MyPrefix]H <Plug>(quickhl-manual-reset)
 nmap [MyPrefix]w <Plug>(quickhl-cword-toggle)
 
 "-------------------------------------------------
+" Unite
+"-------------------------------------------------
+let g:unite_enable_start_insert=1
+let g:unite_source_history_yank_enable =1
+let g:unite_source_file_mru_limit = 200
+nnoremap <silent> ,uy :<C-u>Unite history/yank<CR>
+nnoremap <silent> ,ul :<C-u>Unite line<CR>
+nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
+nnoremap <silent> ,ug :<C-u>Unite grep:. -no-quit -auto-resize<CR>
+nnoremap <silent> ,uf :<C-u>UniteWithCurrentDir -buffer-name=files file<CR>
+nnoremap <silent> ,uF :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
+nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
+
+nmap <C-n> :UniteResume -no-quit<CR><C-n><C-l><CR>
+nmap <C-p> :UniteResume -no-quit<CR><C-p><C-l><CR>
+
+"-------------------------------------------------
 " FuzzyFinder
 "-------------------------------------------------
 "nnoremap [MyPrefix]f	:<C-u>FufFile<CR>
 "nnoremap [MyPrefix]b	:<C-u>FufBuffer<CR>
-let g:fuf_modesDisable = []
-let g:fuf_mrufile_maxItem = 400
-let g:fuf_mrucmd_maxItem = 400
-nnoremap [MyPrefix]b		:FufBuffer<CR>
-nnoremap [MyPrefix]f		:FufFile<CR>
-nnoremap [MyPrefix]F		:FufFileWithCurrentBufferDir<CR>
-nnoremap [MyPrefix]d		:FufDir<CR>
-nnoremap [MyPrefix]D		:FufDirWithCurrentBufferDir<CR>
-nnoremap [MyPrefix]mf		:FufMruFile<CR>
-nnoremap [MyPrefix]mc		:FufMruCmd<CR>
-nnoremap [MyPrefix]cf		:FufCoverageFileChange<CR>
-nnoremap [MyPrefix]cF		:FufCoverageFileRegister<CR>
-nnoremap [MyPrefix]vf		:FufBookmarkFile<CR>
-nnoremap [MyPrefix]vF		:FufBookmarkFileAdd<CR>
-nnoremap [MyPrefix]vd		:FufBookmarkDir<CR>
-nnoremap [MyPrefix]vD		:FufBookmarkDirAdd<CR>
-nnoremap [MyPrefix]j		:FufJumpList<CR>
-nnoremap [MyPrefix]q		:FufQuickfix<CR>
-nnoremap [MyPrefix]<C-r>	:FufRenewCache<CR>
+"let g:fuf_modesDisable = []
+"let g:fuf_mrufile_maxItem = 400
+"let g:fuf_mrucmd_maxItem = 400
+"nnoremap [MyPrefix]b		:FufBuffer<CR>
+"nnoremap [MyPrefix]f		:FufFile<CR>
+"nnoremap [MyPrefix]F		:FufFileWithCurrentBufferDir<CR>
+"nnoremap [MyPrefix]d		:FufDir<CR>
+"nnoremap [MyPrefix]D		:FufDirWithCurrentBufferDir<CR>
+"nnoremap [MyPrefix]mf		:FufMruFile<CR>
+"nnoremap [MyPrefix]mc		:FufMruCmd<CR>
+"nnoremap [MyPrefix]cf		:FufCoverageFileChange<CR>
+"nnoremap [MyPrefix]cF		:FufCoverageFileRegister<CR>
+"nnoremap [MyPrefix]vf		:FufBookmarkFile<CR>
+"nnoremap [MyPrefix]vF		:FufBookmarkFileAdd<CR>
+"nnoremap [MyPrefix]vd		:FufBookmarkDir<CR>
+"nnoremap [MyPrefix]vD		:FufBookmarkDirAdd<CR>
+"nnoremap [MyPrefix]j		:FufJumpList<CR>
+"nnoremap [MyPrefix]q		:FufQuickfix<CR>
+"nnoremap [MyPrefix]<C-r>	:FufRenewCache<CR>
 
 "-------------------------------------------------
 " itchyny/lightline.vim
@@ -142,8 +178,8 @@ noremap <C-h> :Gtags -f %<CR>
 "noremap <C-j> :GtagsCursor<CR>
 noremap <C-j> :Gtags <C-r><C-w><CR>
 noremap <C-k> :Gtags -r <C-r><C-w><CR>
-noremap <C-n> :cn<CR>
-noremap <C-p> :cp<CR>
+"noremap <C-n> :cn<CR>
+"noremap <C-p> :cp<CR>
 
 "-------------------------------------------------
 " QuickRun
