@@ -56,6 +56,8 @@ NeoBundle 'Shougo/vimproc.vim', {
 			\    },
 			\ }
 
+NeoBundle 'hewes/unite-gtags'
+
 "NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'tpope/vim-repeat'
@@ -112,17 +114,35 @@ nmap [MyPrefix]w <Plug>(quickhl-cword-toggle)
 let g:unite_enable_start_insert=1
 let g:unite_source_history_yank_enable =1
 let g:unite_source_file_mru_limit = 200
-nnoremap <silent> ,uy :<C-u>Unite history/yank<CR>
-nnoremap <silent> ,ul :<C-u>Unite line<CR>
-nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
-nnoremap <silent> ,ug :<C-u>Unite grep:. -no-quit -auto-resize<CR>
-nnoremap <silent> ,uf :<C-u>UniteWithCurrentDir -buffer-name=files file<CR>
-nnoremap <silent> ,uF :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
-nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
-nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
+let g:unite_winheight = 10
+nnoremap <silent> [MyPrefix]ub :<C-u>Unite buffer<CR>
+nnoremap <silent> [MyPrefix]uy :<C-u>Unite history/yank<CR>
+"nnoremap <silent> [MyPrefix]ul :<C-u>UniteClose line<CR>:<C-u>Unite -buffer-name=line -no-quit line<CR>
+nnoremap <silent> [MyPrefix]ul :<C-u>Unite -buffer-name=line -no-quit -resume line<CR>
+nnoremap <silent> [MyPrefix]ug :<C-u>UniteClose grep<CR>:<C-u>Unite -buffer-name=grep -no-quit -no-start-insert grep<CR>
+nnoremap <silent> [MyPrefix]uG :<C-u>UniteWithBufferDir -no-quit -buffer-name=grep grep<CR>
+nnoremap <silent> [MyPrefix]uf :<C-u>UniteWithCurrentDir -buffer-name=files file<CR>
+nnoremap <silent> [MyPrefix]uF :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> [MyPrefix]ur :<C-u>Unite -buffer-name=register register<CR>
+nnoremap <silent> [MyPrefix]uu :<C-u>Unite file_mru buffer<CR>
 
+"nmap <C-n> :UniteResume -winheight=g:unite_winheight -no-focus -no-start-insert<CR>:UniteNext<CR>
+"nmap <C-p> :UniteResume -winheight=g:unite_winheight -no-focus -no-start-insert<CR>:UnitePrevious<CR>
+"nmap <C-n> :UniteNext<CR>
+"nmap <C-p> :UnitePrevious<CR>
 nmap <C-n> :UniteResume -no-quit<CR><C-n><C-l><CR>
 nmap <C-p> :UniteResume -no-quit<CR><C-p><C-l><CR>
+
+noremap <C-j> :Unite -auto-resize -no-quit -no-start-insert -default-action=switch gtags/def:<C-r><C-w><CR><CR>
+
+"TODO: something is wrong
+noremap <C-k> :Unite -auto-resize -no-quit -no-start-insert -default-action=switch gtags/ref:<C-r><C-w><CR><CR>
+
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --smart-case'
+  let g:unite_source_grep_recursive_opt = ''
+endif
 
 "-------------------------------------------------
 " FuzzyFinder
@@ -173,11 +193,11 @@ let g:lightline.inactive = g:lightline.active
 "-------------------------------------------------
 " gtags
 "-------------------------------------------------
-noremap <C-g> :Gtags 
-noremap <C-h> :Gtags -f %<CR>
-"noremap <C-j> :GtagsCursor<CR>
-noremap <C-j> :Gtags <C-r><C-w><CR>
-noremap <C-k> :Gtags -r <C-r><C-w><CR>
+"noremap <C-g> :Gtags 
+"noremap <C-h> :Gtags -f %<CR>
+""noremap <C-j> :GtagsCursor<CR>
+"noremap <C-j> :Gtags <C-r><C-w><CR>
+"noremap <C-k> :Gtags -r <C-r><C-w><CR>
 "noremap <C-n> :cn<CR>
 "noremap <C-p> :cp<CR>
 
