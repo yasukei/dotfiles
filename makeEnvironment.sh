@@ -28,8 +28,6 @@
 # sudo apt-get install byobu
 # sudo apt-get install silversearcher-ag
 # sudo apt-get install chromium-browser
-# sudo apt-get install mozc-utils-gui
-# sudo apt-get install ibus-mozc
 # sudo apt-get install g++
 
 # for Spin's make
@@ -69,12 +67,12 @@
 #--------------------------------------------------------------------
 # vim settings
 #--------------------------------------------------------------------
-# git clone https://github.com/gmarik/Vundle.vim `pwd`/.vim/bundle/Vundle.vim
 # ln -sf `pwd`/.vim ~/.vim
 # ln -sf `pwd`/.vimrc ~/.vimrc
 # ln -sf `pwd`/_gvimrc ~/_gvimrc
 # ln -sf `pwd`/.gitconfig ~/.gitconfig
 # ln -sf `pwd`/.gitignore ~/.gitignore
+# curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 
 #--------------------------------------------------------------------
 # .profile
