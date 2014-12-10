@@ -54,6 +54,7 @@ NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'rking/ag.vim'
 "NeoBundle 'vcscommand.vim'
+NeoBundle 'fuenor/qfixhowm.git'
 
 " colorscheme
 NeoBundle 'flazz/vim-colorschemes'
@@ -180,14 +181,11 @@ noremap <C-p> :cp<CR>
 "-------------------------------------------------
 " qfixhowm
 "-------------------------------------------------
-"set runtimepath+=~/.vim/qfixapp
-"let QFixHowm_key		= 'g'
-"let howm_dir			= '~/howm'
-"let howm_filename		= '%Y/%m/%Y-%m-%d-%H%M%s.txt'
-"let howm_fileencoding	= 'utf-8'
-"let howm_fileformat		= 'unix'
-"
-"let QFixHowm_FileType	= 'qfix_memo'
+let QFixHowm_Key = 'g'
+let howm_dir             = '~/git/junk/memo/howm'
+let howm_filename        = '%Y/%m/%Y-%m-%d-%H%M%S.txt'
+let howm_fileencoding    = 'utf-8'
+let howm_fileformat      = 'unix'
 
 "-------------------------------------------------
 "" General
