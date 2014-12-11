@@ -101,8 +101,8 @@ let g:ctrlp_show_hidden = 1
 nnoremap [MyPrefix]b		:<C-u>CtrlPBuffer<CR>
 nnoremap [MyPrefix]f		:<C-u>CtrlP<CR>
 nnoremap [MyPrefix]F		:<C-u>CtrlPCurFile<CR>
-nnoremap [MyPrefix]d		:<C-u>CtrlPCurWD<CR>
-nnoremap [MyPrefix]D		:<C-u>CtrlPDir<CR>
+nnoremap [MyPrefix]d		:<C-u>CtrlPDir<CR>
+nnoremap [MyPrefix]D		:<C-u>CtrlPCurWD<CR>
 nnoremap [MyPrefix]mf		:<C-u>CtrlPMRUFiles<CR>
 nnoremap [MyPrefix]vd		:<C-u>CtrlPBookmarkDir<CR>
 nnoremap [MyPrefix]vD		:<C-u>CtrlPBookmarkDirAdd<CR>
@@ -192,7 +192,7 @@ let howm_fileformat      = 'unix'
 "-------------------------------------------------
 set nocompatible
 
-"set fileencodings=iso-2022-jp,euc-jp,cp932,ucs-bom,utf-8,default,latin1
+set fileencodings=utf-8,iso-2022-jp,euc-jp,cp932,ucs-bom,default,latin1
 set fileformat=unix
 
 set cursorline
