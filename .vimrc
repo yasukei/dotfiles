@@ -23,6 +23,12 @@
 "   :registers
 "   :reg
 "
+" binary mode
+" 	:set binary
+" 	:%!xxd
+"
+" 	:%!xxd -r		# revert
+" 	:%!xxd -g 1		# delimited 1 byte
 
 "-------------------------------------------------
 " NeoBundle
