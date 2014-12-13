@@ -47,8 +47,6 @@ NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'tpope/vim-repeat'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 't9md/vim-quickhl'
-"NeoBundle 'L9'
-"NeoBundle 'FuzzyFinder'
 NeoBundle 'itchyny/lightline.vim'
 "Bundle 'gtags.vim' " install manually gtags.vim version 0.6.4 or later from GNU GLOBAL share directory
 NeoBundle 'thinca/vim-quickrun'
@@ -60,7 +58,6 @@ NeoBundle 'fuenor/qfixhowm.git'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'yasukei/vim-colors'
 
 " You can specify revision/branch/tag.
 "NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -110,31 +107,6 @@ nnoremap [MyPrefix]l		:<C-u>CtrlPLine<CR>
 nnoremap [MyPrefix]q		:<C-u>CtrlPQuickfix<CR>
 
 "-------------------------------------------------
-" FuzzyFinder
-"-------------------------------------------------
-"nnoremap [MyPrefix]f	:<C-u>FufFile<CR>
-"nnoremap [MyPrefix]b	:<C-u>FufBuffer<CR>
-"let g:fuf_modesDisable = []
-"let g:fuf_mrufile_maxItem = 400
-"let g:fuf_mrucmd_maxItem = 400
-"nnoremap [MyPrefix]b		:FufBuffer<CR>
-"nnoremap [MyPrefix]f		:FufFile<CR>
-"nnoremap [MyPrefix]F		:FufFileWithCurrentBufferDir<CR>
-"nnoremap [MyPrefix]d		:FufDir<CR>
-"nnoremap [MyPrefix]D		:FufDirWithCurrentBufferDir<CR>
-"nnoremap [MyPrefix]mf		:FufMruFile<CR>
-"nnoremap [MyPrefix]mc		:FufMruCmd<CR>
-"nnoremap [MyPrefix]cf		:FufCoverageFileChange<CR>
-"nnoremap [MyPrefix]cF		:FufCoverageFileRegister<CR>
-"nnoremap [MyPrefix]vf		:FufBookmarkFile<CR>
-"nnoremap [MyPrefix]vF		:FufBookmarkFileAdd<CR>
-"nnoremap [MyPrefix]vd		:FufBookmarkDir<CR>
-"nnoremap [MyPrefix]vD		:FufBookmarkDirAdd<CR>
-"nnoremap [MyPrefix]j		:FufJumpList<CR>
-"nnoremap [MyPrefix]q		:FufQuickfix<CR>
-"nnoremap [MyPrefix]<C-r>	:FufRenewCache<CR>
-
-"-------------------------------------------------
 " itchyny/lightline.vim
 "-------------------------------------------------
 "let g:lightline = {
@@ -182,7 +154,7 @@ noremap <C-p> :cp<CR>
 " qfixhowm
 "-------------------------------------------------
 let QFixHowm_Key = 'g'
-let howm_dir             = '~/git/junk/memo/howm'
+let howm_dir             = '~/git/howm/'
 let howm_filename        = '%Y/%m/%Y-%m-%d-%H%M%S.txt'
 let howm_fileencoding    = 'utf-8'
 let howm_fileformat      = 'unix'
@@ -192,7 +164,7 @@ let howm_fileformat      = 'unix'
 "-------------------------------------------------
 set nocompatible
 
-"set fileencodings=iso-2022-jp,euc-jp,cp932,ucs-bom,utf-8,default,latin1
+set fileencodings=utf-8,iso-2022-jp,cp932,euc-jp,ucs-bom,default,latin1
 set fileformat=unix
 
 set cursorline
