@@ -19,16 +19,15 @@
 #--------------------------------------------------------------------
 # binaries installed from package
 #--------------------------------------------------------------------
-# sudo apt-get install git
-# sudo apt-get install subversion
-# sudo apt-get install binutils
-# sudo apt-get install vim
-# 
-# sudo apt-get install gnome-do
-# sudo apt-get install byobu
-# sudo apt-get install silversearcher-ag
-# sudo apt-get install chromium-browser
-# sudo apt-get install g++
+sudo apt-get install				\
+			git						\
+			curl					\
+			subversion				\
+			binutils				\
+			vim-gtk					\
+			gnome-do				\
+			silversearcher-ag		\
+			g++						\
 
 # for Spin's make
 # sudo apt-get install bison
@@ -36,7 +35,9 @@
 #--------------------------------------------------------------------
 # binaries installed manually
 #--------------------------------------------------------------------
-# mkdir ~/bin
+mkdir ~/bin
+mkdir ~/git
+mkdir ~/svn
 
 #--------------------------------------------------------------------
 # gtest/gmock
@@ -67,12 +68,12 @@
 #--------------------------------------------------------------------
 # vim settings
 #--------------------------------------------------------------------
-# ln -sf `pwd`/.vim ~/.vim
-# ln -sf `pwd`/.vimrc ~/.vimrc
-# ln -sf `pwd`/_gvimrc ~/_gvimrc
-# ln -sf `pwd`/.gitconfig ~/.gitconfig
-# ln -sf `pwd`/.gitignore ~/.gitignore
-# curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+#ln -sf `pwd`/.vim ~/.vim
+#ln -sf `pwd`/.vimrc ~/.vimrc
+#ln -sf `pwd`/_gvimrc ~/_gvimrc
+#ln -sf `pwd`/.gitconfig ~/.gitconfig
+#ln -sf `pwd`/.gitignore ~/.gitignore
+#curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 
 #--------------------------------------------------------------------
 # .profile
