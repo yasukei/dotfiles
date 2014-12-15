@@ -28,6 +28,7 @@ sudo apt-get install				\
 			gnome-do				\
 			silversearcher-ag		\
 			g++						\
+			openssh-server			\
 
 # for Spin's make
 # sudo apt-get install bison
