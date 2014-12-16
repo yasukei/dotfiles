@@ -101,11 +101,13 @@ nmap [MyPrefix]w <Plug>(quickhl-cword-toggle)
 "-------------------------------------------------
 let g:ctrlp_map = '<Nop>'
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_working_path_mode = 'a'
 nnoremap [MyPrefix]b		:<C-u>CtrlPBuffer<CR>
-nnoremap [MyPrefix]f		:<C-u>CtrlP<CR>
+"nnoremap [MyPrefix]f		:<C-u>CtrlP<CR>
+nnoremap [MyPrefix]f		:<C-u>CtrlPCurWD<CR>
 nnoremap [MyPrefix]F		:<C-u>CtrlPCurFile<CR>
 nnoremap [MyPrefix]d		:<C-u>CtrlPDir<CR>
-nnoremap [MyPrefix]D		:<C-u>CtrlPCurWD<CR>
+"nnoremap [MyPrefix]D		:<C-u>CtrlPCurWD<CR>
 nnoremap [MyPrefix]mf		:<C-u>CtrlPMRUFiles<CR>
 nnoremap [MyPrefix]vd		:<C-u>CtrlPBookmarkDir<CR>
 nnoremap [MyPrefix]vD		:<C-u>CtrlPBookmarkDirAdd<CR>
