@@ -69,12 +69,12 @@ mkdir ~/svn
 #--------------------------------------------------------------------
 # vim settings
 #--------------------------------------------------------------------
-#ln -sf `pwd`/.vim ~/.vim
-#ln -sf `pwd`/.vimrc ~/.vimrc
-#ln -sf `pwd`/_gvimrc ~/_gvimrc
-#ln -sf `pwd`/.gitconfig ~/.gitconfig
-#ln -sf `pwd`/.gitignore ~/.gitignore
-#curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+ln -sf ~/git/etc/.vim ~/.vim
+ln -sf ~/git/etc/.vimrc ~/.vimrc
+ln -sf ~/git/etc/_gvimrc ~/_gvimrc
+ln -sf ~/git/etc/.gitconfig ~/.gitconfig
+ln -sf ~/git/etc/.gitignore ~/.gitignore
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 
 #--------------------------------------------------------------------
 # .profile
