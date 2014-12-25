@@ -207,7 +207,8 @@ set foldlevel=3
 " zR: open all, zo: open, zO: open recursively
 " zM: close all, zc: close, zC: close recursively
 
-"set clipboard+=unnamed
+"set clipboard+=unnamed,autoselect	" want to copy string from vim to clipboard in terminal like teraterm
+
 set pastetoggle=<F12>
 autocmd InsertLeave * set nopaste
 
