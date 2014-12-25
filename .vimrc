@@ -208,6 +208,8 @@ set foldlevel=3
 " zM: close all, zc: close, zC: close recursively
 
 "set clipboard+=unnamed
+set pastetoggle=<F12>
+autocmd InsertLeave * set nopaste
 
 if has('mouse')
 	set mouse=a
