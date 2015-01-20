@@ -172,6 +172,7 @@ let howm_fileformat      = 'unix'
 "-------------------------------------------------
 set nocompatible
 
+set encoding=utf-8
 set fileencodings=utf-8,iso-2022-jp,cp932,euc-jp,ucs-bom,default,latin1
 set fileformat=unix
 
@@ -243,6 +244,7 @@ set noswapfile
 "-------------------------------------------------
 " keymap
 "-------------------------------------------------
+let mapleader = "\\"
 noremap [MyPrefix] <Nop>
 map <Space> [MyPrefix]
 noremap  
