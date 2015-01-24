@@ -168,7 +168,7 @@ let howm_fileencoding    = 'utf-8'
 let howm_fileformat      = 'unix'
 
 "-------------------------------------------------
-"" General
+" General
 "-------------------------------------------------
 set nocompatible
 
@@ -179,7 +179,8 @@ set fileformat=unix
 set cursorline
 set number
 set ruler
-set nolist
+set list
+set listchars=tab:>-,trail:-,eol:<
 set wrap
 
 set title
