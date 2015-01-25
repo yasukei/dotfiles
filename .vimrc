@@ -180,7 +180,7 @@ set cursorline
 set number
 set ruler
 set list
-set listchars=tab:>-,trail:-,eol:<
+set listchars=tab:^~,eol:^
 set wrap
 
 set title
