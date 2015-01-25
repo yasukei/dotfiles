@@ -149,14 +149,12 @@ noremap <C-p> :cp<CR>
 "-------------------------------------------------
 " QuickRun
 "-------------------------------------------------
-"let g:quickrun_config = {
-"\	"_" : {
-"\		"outputter/buffer/split" : "rightbelow 8sp",
-"\		"outputter/error/error" : "quickfix",
-"\		"outputter/error/success" : "quickfix",
-"\		"outputter" : "error",
-"\	},
-"\}
+let g:quickrun_config = {
+\	"_" : {
+\		"outputter/buffer/split"	: "rightbelow 8sp",
+\	},
+\}
+nnoremap <Leader>r		:<C-u>QuickRun<CR>
 
 "-------------------------------------------------
 " qfixhowm
