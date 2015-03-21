@@ -191,6 +191,7 @@ set history=200
 syntax on
 set t_Co=256
 colorscheme hybrid
+highlight Normal ctermbg=none
 
 set tabstop=4
 set shiftwidth=4
