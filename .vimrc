@@ -159,11 +159,12 @@ nnoremap <Leader>r		:<C-u>QuickRun<CR>
 "-------------------------------------------------
 " qfixhowm
 "-------------------------------------------------
-let QFixHowm_Key = 'g'
+let QFixHowm_Key         = 'g'
 let howm_dir             = '~/git/howm/'
-let howm_filename        = '%Y/%m/%Y-%m-%d-%H%M%S.txt'
+let howm_filename        = '%Y/%m/%Y-%m-%d-%H%M%S.md'
 let howm_fileencoding    = 'utf-8'
 let howm_fileformat      = 'unix'
+let QFixHowm_FileType    = 'markdown'
 
 "-------------------------------------------------
 " General
