@@ -212,7 +212,9 @@ set foldlevel=3
 "set clipboard+=unnamed,autoselect	" want to copy string from vim to clipboard in terminal like teraterm
 
 set pastetoggle=<F12>
-autocmd InsertLeave * set nopaste
+au InsertLeave * set nopaste
+
+au BufNewFile,BufRead *.md :set filetype=markdown
 
 if has('mouse')
 	set mouse=a
