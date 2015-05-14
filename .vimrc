@@ -159,11 +159,12 @@ nnoremap <Leader>r		:<C-u>QuickRun<CR>
 "-------------------------------------------------
 " qfixhowm
 "-------------------------------------------------
-let QFixHowm_Key = 'g'
+let QFixHowm_Key         = 'g'
 let howm_dir             = '~/git/howm/'
-let howm_filename        = '%Y/%m/%Y-%m-%d-%H%M%S.txt'
+let howm_filename        = '%Y/%m/%Y-%m-%d-%H%M%S.md'
 let howm_fileencoding    = 'utf-8'
 let howm_fileformat      = 'unix'
+let QFixHowm_FileType    = 'markdown'
 
 "-------------------------------------------------
 " General
@@ -212,7 +213,9 @@ set foldlevel=3
 set clipboard^=unnamedplus,autoselect
 
 set pastetoggle=<F12>
-autocmd InsertLeave * set nopaste
+au InsertLeave * set nopaste
+
+au BufNewFile,BufRead *.md :set filetype=markdown
 
 if has('mouse')
 	set mouse=a
