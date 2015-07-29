@@ -2,12 +2,14 @@
 "-------------------------------------------------
 " General
 "-------------------------------------------------
-set guifont=MS_Gothic:h12
+"set guifont=MS_Gothic:h12
 
-set columns=180
-set lines=90
+"set columns=180
+"set lines=90
 
 set guioptions-=m
 set guioptions-=T
 
-colorscheme no_quarter
+"colorscheme no_quarter
+"colorscheme eclipse
+colorscheme newspaper

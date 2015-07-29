@@ -59,11 +59,13 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'vcscommand.vim'
 NeoBundle 'fuenor/qfixhowm.git'
+NeoBundle 'godlygeek/csapprox'
 
 " colorscheme
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'google/vim-colorscheme-primary'
 
 " You can specify revision/branch/tag.
 "NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -178,8 +180,8 @@ set fileformat=unix
 set cursorline
 set number
 set ruler
-set list
-set listchars=tab:^~,eol:^
+"set list
+"set listchars=tab:^~,eol:^
 set wrap
 
 set title
@@ -191,8 +193,16 @@ set history=200
 
 syntax on
 set t_Co=256
-colorscheme hybrid
-highlight Normal ctermbg=none
+"" colorscheme dark
+"colorscheme hybrid
+
+"" colorscheme light
+"colorscheme github
+colorscheme primary
+"colorscheme simple256
+"colorscheme summerfruit256
+"colorscheme trivial256
+"highlight Normal ctermbg=none
 
 set tabstop=4
 set shiftwidth=4
