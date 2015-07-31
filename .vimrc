@@ -88,6 +88,10 @@ NeoBundleCheck
 let g:EasyMotion_leader_key = '<Leader>'
 " <Leader> means \ key
 let g:EasyMotion_keys = 'asdfghjklqwertyuiopzxcvbnmASDFGHJKLQWERTYUIOPZXCVBNM'
+hi link EasyMotionTarget Search
+hi link EasyMotionShade  Comment
+hi link EasyMotionTarget2First Search
+hi link EasyMotionTarget2Second Search
 
 "-------------------------------------------------
 " t9md/vim-quickhl
