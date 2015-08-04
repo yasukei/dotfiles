@@ -214,14 +214,14 @@ function! CtrlPStatusFunc_2(str)
   return lightline#statusline(0)
 endfunction
 
-augroup AutoSyntastic
-  autocmd!
-  autocmd BufWritePost *.c,*.cpp call s:syntastic()
-augroup END
-function! s:syntastic()
-  SyntasticCheck
-  call lightline#update()
-endfunction
+"augroup AutoSyntastic
+"  autocmd!
+"  autocmd BufWritePost *.c,*.cpp call s:syntastic()
+"augroup END
+"function! s:syntastic()
+"  SyntasticCheck
+"  call lightline#update()
+"endfunction
 
 "-------------------------------------------------
 " gtags
