@@ -61,6 +61,19 @@ NeoBundle 'vcscommand.vim'
 NeoBundle 'fuenor/qfixhowm.git'
 NeoBundle 'godlygeek/csapprox'
 
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
+NeoBundle "osyo-manga/shabadou.vim"
+NeoBundle "osyo-manga/vim-watchdogs"
+NeoBundle "cohama/vim-hier"
+
 " colorscheme
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'nanotech/jellybeans.vim'
@@ -80,7 +93,7 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 "End NeoBundle Scripts-------------------------
-
+"
 
 "-------------------------------------------------
 " Lokaltog/vim-easymotion
@@ -171,6 +184,17 @@ let howm_filename        = '%Y/%m/%Y-%m-%d-%H%M%S.md'
 let howm_fileencoding    = 'utf-8'
 let howm_fileformat      = 'unix'
 let QFixHowm_FileType    = 'markdown'
+
+"-------------------------------------------------
+" vim-hier
+"-------------------------------------------------
+let g:hier_highlight_group_qf   = 'SpellBad' 
+let g:hier_highlight_group_qfw  = 'SpellLocal' 
+let g:hier_highlight_group_qfi  = 'SpellRare' 
+
+let g:hier_highlight_group_loc  = 'SpellBad' 
+let g:hier_highlight_group_locw = 'SpellLocal' 
+let g:hier_highlight_group_loci = 'SpellRare' 
 
 "-------------------------------------------------
 " General
