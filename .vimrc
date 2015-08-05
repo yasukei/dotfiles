@@ -113,7 +113,7 @@ nmap [MyPrefix]h <Plug>(quickhl-manual-this)
 xmap [MyPrefix]h <Plug>(quickhl-manual-this)
 nmap [MyPrefix]H <Plug>(quickhl-manual-reset)
 xmap [MyPrefix]H <Plug>(quickhl-manual-reset)
-nmap [MyPrefix]w <Plug>(quickhl-cword-toggle)
+"nmap [MyPrefix]w <Plug>(quickhl-cword-toggle)
 
 "-------------------------------------------------
 " ctrlp
@@ -268,8 +268,15 @@ let howm_fileformat      = 'unix'
 let QFixHowm_FileType    = 'markdown'
 
 "-------------------------------------------------
+" watchdogs
+"-------------------------------------------------
+nmap [MyPrefix]w :WatchdogsRun<CR>:cc<CR>
+
+"-------------------------------------------------
 " vim-hier
 "-------------------------------------------------
+let g:hier_enabled              = 1
+
 let g:hier_highlight_group_qf   = 'SpellBad' 
 let g:hier_highlight_group_qfw  = 'SpellLocal' 
 let g:hier_highlight_group_qfi  = 'SpellRare' 
