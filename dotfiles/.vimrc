@@ -347,14 +347,6 @@ if has('mouse')
 	set mouse=a
 endif
 
-function! s:Paste64Copy()
-  "let l:tmp = @@
-  "echo l:tmp
-  echo "copy now\n\n"
-endfunction
-
-command! Paste64Copy :call s:Paste64Copy()
-
 "-------------------------------------------------
 " Search
 "-------------------------------------------------
