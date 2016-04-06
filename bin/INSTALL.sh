@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir -p "$HOME"/bin
+
 current_dir=`pwd`
 
 for f in ?*
@@ -10,10 +12,10 @@ do
 	[[ "$f" = ".git" ]] && continue
 
 	if [[ "$f" =~ .*\.sh ]]; then
-		bash ./"$f"
+		bash ./"$f" || exit $?
 	elif [[ -d "$f" ]]; then
 		cd "$f"
-		bash ./INSTALL.sh
+		bash ./INSTALL.sh || exit $?
 		cd "$current_dir"
 	else
 		echo "skip $f"
