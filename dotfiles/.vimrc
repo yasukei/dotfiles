@@ -146,7 +146,7 @@ nnoremap [MyPrefix]l		:<C-u>CtrlPLine<CR>
 nnoremap [MyPrefix]q		:<C-u>CtrlPQuickfix<CR>
 
 " with 'nixprime/cpsm'
-let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
+"let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
 
 "-------------------------------------------------
 " itchyny/lightline.vim
