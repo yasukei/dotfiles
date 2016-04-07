@@ -63,6 +63,7 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'nixprime/cpsm'
 NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 't9md/vim-quickhl'
 NeoBundle 'itchyny/lightline.vim'
@@ -258,8 +259,6 @@ noremap <C-h> :Gtags -f %<CR>
 "noremap <C-j> :GtagsCursor<CR>
 noremap <C-j> :Gtags <C-r><C-w><CR>
 noremap <C-k> :Gtags -r <C-r><C-w><CR>
-noremap <C-n> :cn<CR>
-noremap <C-p> :cp<CR>
 
 "-------------------------------------------------
 " QuickRun
