@@ -5,9 +5,21 @@
 "   do, dp: diff obtain, diff put
 "   [c, ]c: prev diff, next diff
 "
-" edit file or directory
-"   :e %:p
-"   :e %:h
+" count pattern being matched
+"   :%s///gn
+"
+" global command
+"   print lines match pattern
+"     :g/pattern/print
+"     :g/pattern/p
+"
+"   delete lines match pattern
+"     :g/pattern/delete
+"     :g/pattern/d
+"
+"   invert
+"     :g!/pattern/p
+"     :v/pattern/d
 "
 " re-select selected visual area
 "   gv
@@ -20,7 +32,6 @@
 "   q:
 "
 " show each register's content
-"   :registers
 "   :reg
 "
 " binary mode
