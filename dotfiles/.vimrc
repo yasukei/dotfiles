@@ -296,7 +296,7 @@ set cursorline
 set number
 set ruler
 "set list
-"set listchars=tab:^~,eol:^
+"set listchars=tab:>-,eol:^
 set wrap
 
 set title
