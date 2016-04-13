@@ -312,11 +312,8 @@ set t_Co=256
 "colorscheme hybrid
 
 "" colorscheme light
-"colorscheme github
-colorscheme primary
-"colorscheme simple256
-"colorscheme summerfruit256
-"colorscheme trivial256
+"colorscheme primary
+colorscheme lightning
 "highlight Normal ctermbg=none
 
 set tabstop=4
