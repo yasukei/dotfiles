@@ -1,0 +1,14 @@
+# ref: http://astyle.sourceforge.net/astyle.html
+--style=allman
+--indent=force-tab
+--min-conditional-indent=2
+--max-instatement-indent=40
+--indent-switches
+--indent-namespaces
+--pad-oper
+--pad-paren
+--align-pointer=type
+--align-reference=type
+--add-brackets
+
+--suffix=none
