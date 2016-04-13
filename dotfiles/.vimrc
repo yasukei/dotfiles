@@ -60,7 +60,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 "NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'nixprime/cpsm'
 NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-unimpaired'
@@ -144,9 +143,6 @@ nnoremap [MyPrefix]vd		:<C-u>CtrlPBookmarkDir<CR>
 nnoremap [MyPrefix]vD		:<C-u>CtrlPBookmarkDirAdd<CR>
 nnoremap [MyPrefix]l		:<C-u>CtrlPLine<CR>
 nnoremap [MyPrefix]q		:<C-u>CtrlPQuickfix<CR>
-
-" with 'nixprime/cpsm'
-"let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
 
 "-------------------------------------------------
 " itchyny/lightline.vim
