@@ -69,7 +69,6 @@ NeoBundle 'itchyny/lightline.vim'
 "Bundle 'gtags.vim' " install manually gtags.vim version 0.6.4 or later from GNU GLOBAL share directory
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'rking/ag.vim'
-NeoBundle 'fuenor/qfixhowm.git'
 NeoBundle 'godlygeek/csapprox'
 
 NeoBundle 'Shougo/vimproc.vim', {
@@ -265,16 +264,6 @@ let g:quickrun_config = {
 \	},
 \}
 nnoremap <Leader>r		:<C-u>QuickRun<CR>
-
-"-------------------------------------------------
-" qfixhowm
-"-------------------------------------------------
-let QFixHowm_Key         = 'g'
-let howm_dir             = '~/git/howm/'
-let howm_filename        = '%Y/%m/%Y-%m-%d-%H%M%S.md'
-let howm_fileencoding    = 'utf-8'
-let howm_fileformat      = 'unix'
-let QFixHowm_FileType    = 'markdown'
 
 "-------------------------------------------------
 " watchdogs
