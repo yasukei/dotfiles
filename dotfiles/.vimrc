@@ -326,8 +326,11 @@ set smartindent
 "set cindent
 
 set foldmethod=indent
-set foldlevel=3
-"set foldcolumn=2
+highlight! link Folded Conceal
+" to see highlight settings
+"   :highlight
+"set foldlevel=3
+"set foldcolumn=5
 " zR: open all, zo: open, zO: open recursively
 " zM: close all, zc: close, zC: close recursively
 
