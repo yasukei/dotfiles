@@ -335,7 +335,8 @@ set foldlevel=99
 " zM: close all, zc: close, zC: close recursively
 
 "set clipboard+=unnamed,autoselect	" want to copy string from vim to clipboard in terminal like teraterm
-set clipboard^=unnamedplus,autoselect
+"set clipboard^=unnamedplus,autoselect "unnamedplus works weird behavior of paste
+set clipboard^=autoselect
 
 set pastetoggle=<F12>
 au InsertLeave * set nopaste
