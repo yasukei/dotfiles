@@ -1,4 +1,10 @@
 "-------------------------------------------------
+" TODO
+"-------------------------------------------------
+" - change colors of quickhl
+"
+
+"-------------------------------------------------
 " cheat sheet
 "-------------------------------------------------
 " vimdiff
@@ -124,6 +130,27 @@ xmap [MyPrefix]h <Plug>(quickhl-manual-this)
 nmap [MyPrefix]H <Plug>(quickhl-manual-reset)
 xmap [MyPrefix]H <Plug>(quickhl-manual-reset)
 "nmap [MyPrefix]w <Plug>(quickhl-cword-toggle)
+
+" for 16 colors
+"let g:quickhl_manual_colors = [
+"	\ "gui=bold ctermfg=7   ctermbg=0   guibg=#0a7383 guifg=#ffffff",
+"	\ "gui=bold ctermfg=7   ctermbg=1   guibg=#0a7383 guifg=#ffffff",
+"	\ "gui=bold ctermfg=7   ctermbg=2   guibg=#0a7383 guifg=#ffffff",
+"	\ "gui=bold ctermfg=7   ctermbg=3   guibg=#0a7383 guifg=#ffffff",
+"	\ "gui=bold ctermfg=7   ctermbg=4   guibg=#0a7383 guifg=#ffffff",
+"	\ "gui=bold ctermfg=7   ctermbg=5   guibg=#0a7383 guifg=#ffffff",
+"	\ "gui=bold ctermfg=7   ctermbg=6   guibg=#0a7383 guifg=#ffffff",
+"	\ ]
+
+" for 256 colors
+let g:quickhl_manual_colors = [
+	\ "gui=bold ctermfg=7   ctermbg=154   guibg=#0a7383 guifg=#ffffff",
+	\ "gui=bold ctermfg=7   ctermbg=142   guibg=#0a7383 guifg=#ffffff",
+	\ "gui=bold ctermfg=7   ctermbg=226   guibg=#0a7383 guifg=#ffffff",
+	\ "gui=bold ctermfg=7   ctermbg=214   guibg=#0a7383 guifg=#ffffff",
+	\ "gui=bold ctermfg=7   ctermbg=187   guibg=#0a7383 guifg=#ffffff",
+	\ "gui=bold ctermfg=7   ctermbg=217   guibg=#0a7383 guifg=#ffffff",
+	\ ]
 
 "-------------------------------------------------
 " ctrlp
