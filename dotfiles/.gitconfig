@@ -1,9 +1,32 @@
 [user]
-	name = Kei Yasuda
-	email = kei_yasuda@outlook.com
+	name	= Kei Yasuda
+	email	= kei_yasuda@outlook.com
 [alias]
 	llog	= log --oneline --graph --decorate=full
 	lllog	= log --oneline --name-status --graph --decorate=full
 	st		= status
 	co		= checkout
 	bra		= branch
+
+# ===================================================================
+# cheat sheet
+# ===================================================================
+
+# -------------------------------------------------------------------
+# git log
+# -------------------------------------------------------------------
+# grep log AND condition (this below condition is 'add' AND ' alias')
+#	git log --grep=add --grep=alias --all-match 
+
+# -------------------------------------------------------------------
+# git diff
+# -------------------------------------------------------------------
+# diff unstaged changes
+# 	git diff
+#
+# diff staged changes
+#	git diff --cached
+#
+# diff unstaged and staged changes
+#	git diff HEAD
+
