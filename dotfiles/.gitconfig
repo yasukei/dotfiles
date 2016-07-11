@@ -2,5 +2,6 @@
 	name = Kei Yasuda
 	email = to.yasuda.kei@gmail.com
 [alias]
-	llog = log --oneline --graph --decorate=full
-	lllog = log --oneline --name-status --graph --decorate=full
+	llog	= log --oneline --graph --decorate=full
+	lllog	= log --oneline --name-status --graph --decorate=full
+	st		= status
