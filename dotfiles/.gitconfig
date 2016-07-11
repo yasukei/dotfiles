@@ -5,3 +5,5 @@
 	llog	= log --oneline --graph --decorate=full
 	lllog	= log --oneline --name-status --graph --decorate=full
 	st		= status
+	co		= checkout
+	bra		= branch
