@@ -36,3 +36,29 @@
 # diff unstaged and staged changes
 #	git diff HEAD
 
+# -------------------------------------------------------------------
+# git reset
+# -------------------------------------------------------------------
+# 
+
+# -------------------------------------------------------------------
+# git stash
+# -------------------------------------------------------------------
+# stash changes
+#	git stash save <message>
+#
+# show diff of stash
+# 	git stash show -p stash@{0}
+#
+# delete all stash
+# 	git stash clear
+
+# -------------------------------------------------------------------
+# git revert
+# -------------------------------------------------------------------
+# revert past commit
+# 	git revert <commit-hash>
+#
+# revert but do not commit
+# 	git revert --no-commit <commit-hash>
+
