@@ -2,7 +2,7 @@
 	name	= Kei Yasuda
 	email	= kei_yasuda@outlook.com
 [alias]
-	llog	= log --oneline --graph --decorate=full
+	llog	= log --format='%h %ad %Cgreen%an %Creset%s%Cred%d' --date=short --graph
 	lllog	= log --oneline --name-status --graph --decorate=full
 	st		= status
 	co		= checkout
