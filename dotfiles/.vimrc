@@ -164,7 +164,7 @@ nnoremap [MyPrefix]f		:<C-u>CtrlPCurWD<CR>
 nnoremap [MyPrefix]F		:<C-u>CtrlPCurFile<CR>
 nnoremap [MyPrefix]d		:<C-u>CtrlPDir<CR>
 "nnoremap [MyPrefix]D		:<C-u>CtrlPCurWD<CR>
-nnoremap [MyPrefix]mf		:<C-u>CtrlPMRUFiles<CR>
+"nnoremap [MyPrefix]mf		:<C-u>CtrlPMRUFiles<CR>
 nnoremap [MyPrefix]vd		:<C-u>CtrlPBookmarkDir<CR>
 nnoremap [MyPrefix]vD		:<C-u>CtrlPBookmarkDirAdd<CR>
 nnoremap [MyPrefix]l		:<C-u>CtrlPLine<CR>
@@ -398,6 +398,11 @@ noremap [MyPrefix] <Nop>
 map <Space> [MyPrefix]
 noremap  
 noremap!  
+
+nnoremap [MyPrefix]mm		:make<CR><CR>
+nnoremap [MyPrefix]mr		:make run<CR><CR>
+nnoremap [MyPrefix]mt		:make test<CR><CR>
+nnoremap [MyPrefix]mc		:make clean<CR><CR>
 
 "-------------------------------------------------
 " ctags
