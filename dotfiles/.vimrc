@@ -456,11 +456,11 @@ map <Space> [MyPrefix]
 noremap  
 noremap!  
 
-nnoremap [MyPrefix]mm		:make<CR><CR>
-nnoremap [MyPrefix]mr		:make run<CR><CR>
-nnoremap [MyPrefix]mt		:make test<CR><CR>
-nnoremap [MyPrefix]ml		:make lcov<CR><CR>
-nnoremap [MyPrefix]mc		:make clean<CR><CR>
+nnoremap [MyPrefix]mm		:copen<CR>:make<CR><CR>
+nnoremap [MyPrefix]mr		:copen<CR>:make run<CR><CR>
+nnoremap [MyPrefix]mt		:copen<CR>:make test<CR><CR>:cla<CR>
+nnoremap [MyPrefix]ml		:copen<CR>:make lcov<CR><CR>
+nnoremap [MyPrefix]mc		:copen<CR>:make clean<CR><CR>
 
 "-------------------------------------------------
 " ctags
