@@ -1,6 +1,6 @@
 [user]
 	name	= Kei Yasuda
-	email	= kei_yasuda@outlook.com
+	email	= yasu_kei@icloud.com
 [alias]
 	llog	= log --format='%Cgreen%h %Creset%ad %Cgreen%an %Creset%s%Cred%d' --date=short --graph
 	st		= status
