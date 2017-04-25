@@ -61,3 +61,15 @@
 # revert but do not commit
 # 	git revert --no-commit <commit-hash>
 
+# -------------------------------------------------------------------
+# git submodule
+# -------------------------------------------------------------------
+# show submodules status
+# 	git submodule
+#
+# add submodule
+# 	git submodule add <git repository url> <dir path to clone>
+#
+# checkout submodule
+# 	git submodule update -i
+
