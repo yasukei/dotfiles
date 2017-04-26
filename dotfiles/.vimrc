@@ -402,6 +402,7 @@ noremap!  
 nnoremap [MyPrefix]mm		:make<CR><CR>
 nnoremap [MyPrefix]mr		:make run<CR><CR>
 nnoremap [MyPrefix]mt		:make test<CR><CR>
+nnoremap [MyPrefix]ml		:make lcov<CR><CR>
 nnoremap [MyPrefix]mc		:make clean<CR><CR>
 
 "-------------------------------------------------
