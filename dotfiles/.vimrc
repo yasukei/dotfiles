@@ -123,6 +123,17 @@ hi link EasyMotionTarget2First Search
 hi link EasyMotionTarget2Second Search
 
 "-------------------------------------------------
+" tpope/vim-fugitive
+"-------------------------------------------------
+nnoremap [MyPrefix]gs		:Gstatus<CR>
+nnoremap [MyPrefix]gd		:Gdiff<CR>
+nnoremap [MyPrefix]gD		:Gdiff HEAD<CR>
+nnoremap [MyPrefix]ga		:Gwrite<CR>
+nnoremap [MyPrefix]gr		:Gread<CR>
+nnoremap [MyPrefix]gc		:Gcommit<CR>
+nnoremap [MyPrefix]gb		:Gblame<CR>
+
+"-------------------------------------------------
 " t9md/vim-quickhl
 "-------------------------------------------------
 nmap [MyPrefix]h <Plug>(quickhl-manual-this)
