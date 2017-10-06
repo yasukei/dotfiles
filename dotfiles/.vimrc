@@ -51,10 +51,10 @@
 " NeoBundle
 "-------------------------------------------------
 if has('vim_starting')
-  set nocompatible               " Be iMproved
+	set nocompatible               " Be iMproved
 
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+	" Required:
+	set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
@@ -78,14 +78,14 @@ NeoBundle 'rking/ag.vim'
 NeoBundle 'godlygeek/csapprox'
 
 NeoBundle 'Shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make -f make_mac.mak',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\    },
-\ }
+			\ 'build' : {
+			\     'windows' : 'tools\\update-dll-mingw',
+			\     'cygwin' : 'make -f make_cygwin.mak',
+			\     'mac' : 'make -f make_mac.mak',
+			\     'linux' : 'make',
+			\     'unix' : 'gmake',
+			\    },
+			\ }
 NeoBundle "osyo-manga/shabadou.vim"
 NeoBundle "osyo-manga/vim-watchdogs"
 NeoBundle "cohama/vim-hier"
@@ -157,13 +157,13 @@ xmap [MyPrefix]H <Plug>(quickhl-manual-reset)
 
 " for 256 colors
 let g:quickhl_manual_colors = [
-	\ "gui=bold ctermfg=7   ctermbg=154   guibg=#0a7383 guifg=#ffffff",
-	\ "gui=bold ctermfg=7   ctermbg=142   guibg=#0a7383 guifg=#ffffff",
-	\ "gui=bold ctermfg=7   ctermbg=226   guibg=#0a7383 guifg=#ffffff",
-	\ "gui=bold ctermfg=7   ctermbg=214   guibg=#0a7383 guifg=#ffffff",
-	\ "gui=bold ctermfg=7   ctermbg=187   guibg=#0a7383 guifg=#ffffff",
-	\ "gui=bold ctermfg=7   ctermbg=217   guibg=#0a7383 guifg=#ffffff",
-	\ ]
+			\ "gui=bold ctermfg=7   ctermbg=154   guibg=#0a7383 guifg=#ffffff",
+			\ "gui=bold ctermfg=7   ctermbg=142   guibg=#0a7383 guifg=#ffffff",
+			\ "gui=bold ctermfg=7   ctermbg=226   guibg=#0a7383 guifg=#ffffff",
+			\ "gui=bold ctermfg=7   ctermbg=214   guibg=#0a7383 guifg=#ffffff",
+			\ "gui=bold ctermfg=7   ctermbg=187   guibg=#0a7383 guifg=#ffffff",
+			\ "gui=bold ctermfg=7   ctermbg=217   guibg=#0a7383 guifg=#ffffff",
+			\ ]
 
 "-------------------------------------------------
 " ctrlp
@@ -187,94 +187,94 @@ nnoremap [MyPrefix]q		:<C-u>CtrlPQuickfix<CR>
 " itchyny/lightline.vim
 "-------------------------------------------------
 let g:lightline = {
-	  \ 'colorscheme': 'solarized',
-	  \ 'active': {
-	  \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'readonly', 'filename', 'modified' ], ['ctrlpmark'] ],
-	  \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
-	  \ },
-	  \ 'component': {
-	  \   'filename': '%f',
-	  \   'lineinfo': '%3l/%L:%-2v',
-	  \ },
-	  \ 'component_function': {
-	  \   'fugitive': 'LightLineFugitive',
-	  \   'fileformat': 'LightLineFileformat',
-	  \   'filetype': 'LightLineFiletype',
-	  \   'fileencoding': 'LightLineFileencoding',
-	  \   'mode': 'LightLineMode',
-	  \   'ctrlpmark': 'CtrlPMark',
-	  \ },
-	  \ 'component_expand': {
-	  \   'syntastic': 'SyntasticStatuslineFlag',
-	  \ },
-	  \ 'component_type': {
-	  \   'syntastic': 'error',
-	  \ },
-	  \ 'subseparator': { 'left': '|', 'right': '|' }
-	  \ }
+			\ 'colorscheme': 'solarized',
+			\ 'active': {
+			\   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'readonly', 'filename', 'modified' ], ['ctrlpmark'] ],
+			\   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
+			\ },
+			\ 'component': {
+			\   'filename': '%f',
+			\   'lineinfo': '%3l/%L:%-2v',
+			\ },
+			\ 'component_function': {
+			\   'fugitive': 'LightLineFugitive',
+			\   'fileformat': 'LightLineFileformat',
+			\   'filetype': 'LightLineFiletype',
+			\   'fileencoding': 'LightLineFileencoding',
+			\   'mode': 'LightLineMode',
+			\   'ctrlpmark': 'CtrlPMark',
+			\ },
+			\ 'component_expand': {
+			\   'syntastic': 'SyntasticStatuslineFlag',
+			\ },
+			\ 'component_type': {
+			\   'syntastic': 'error',
+			\ },
+			\ 'subseparator': { 'left': '|', 'right': '|' }
+			\ }
 
 function! LightLineFugitive()
-  try
-	if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && &ft !~? 'vimfiler' && exists('*fugitive#head')
-	  let mark = ''  " edit here for cool mark
-	  let _ = fugitive#head()
-	  return strlen(_) ? mark._ : ''
-	endif
-  catch
-  endtry
-  return ''
+	try
+		if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && &ft !~? 'vimfiler' && exists('*fugitive#head')
+			let mark = ''  " edit here for cool mark
+			let _ = fugitive#head()
+			return strlen(_) ? mark._ : ''
+		endif
+	catch
+	endtry
+	return ''
 endfunction
 
 function! LightLineFileformat()
-  return winwidth(0) > 70 ? &fileformat : ''
+	return winwidth(0) > 70 ? &fileformat : ''
 endfunction
 
 function! LightLineFiletype()
-  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
+	return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
 endfunction
 
 function! LightLineFileencoding()
-  return winwidth(0) > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
+	return winwidth(0) > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
 endfunction
 
 function! LightLineMode()
-  let fname = expand('%:t')
-  return fname == '__Tagbar__' ? 'Tagbar' :
-		\ fname == 'ControlP' ? 'CtrlP' :
-		\ fname == '__Gundo__' ? 'Gundo' :
-		\ fname == '__Gundo_Preview__' ? 'Gundo Preview' :
-		\ fname =~ 'NERD_tree' ? 'NERDTree' :
-		\ &ft == 'unite' ? 'Unite' :
-		\ &ft == 'vimfiler' ? 'VimFiler' :
-		\ &ft == 'vimshell' ? 'VimShell' :
-		\ winwidth(0) > 60 ? lightline#mode() : ''
+	let fname = expand('%:t')
+	return fname == '__Tagbar__' ? 'Tagbar' :
+				\ fname == 'ControlP' ? 'CtrlP' :
+				\ fname == '__Gundo__' ? 'Gundo' :
+				\ fname == '__Gundo_Preview__' ? 'Gundo Preview' :
+				\ fname =~ 'NERD_tree' ? 'NERDTree' :
+				\ &ft == 'unite' ? 'Unite' :
+				\ &ft == 'vimfiler' ? 'VimFiler' :
+				\ &ft == 'vimshell' ? 'VimShell' :
+				\ winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
 
 function! CtrlPMark()
-  if expand('%:t') =~ 'ControlP'
-	call lightline#link('iR'[g:lightline.ctrlp_regex])
-	return lightline#concatenate([g:lightline.ctrlp_prev, g:lightline.ctrlp_item
-		  \ , g:lightline.ctrlp_next], 0)
-  else
-	return ''
-  endif
+	if expand('%:t') =~ 'ControlP'
+		call lightline#link('iR'[g:lightline.ctrlp_regex])
+		return lightline#concatenate([g:lightline.ctrlp_prev, g:lightline.ctrlp_item
+					\ , g:lightline.ctrlp_next], 0)
+	else
+		return ''
+	endif
 endfunction
 
 let g:ctrlp_status_func = {
-  \ 'main': 'CtrlPStatusFunc_1',
-  \ 'prog': 'CtrlPStatusFunc_2',
-  \ }
+			\ 'main': 'CtrlPStatusFunc_1',
+			\ 'prog': 'CtrlPStatusFunc_2',
+			\ }
 
 function! CtrlPStatusFunc_1(focus, byfname, regex, prev, item, next, marked)
-  let g:lightline.ctrlp_regex = a:regex
-  let g:lightline.ctrlp_prev = a:prev
-  let g:lightline.ctrlp_item = a:item
-  let g:lightline.ctrlp_next = a:next
-  return lightline#statusline(0)
+	let g:lightline.ctrlp_regex = a:regex
+	let g:lightline.ctrlp_prev = a:prev
+	let g:lightline.ctrlp_item = a:item
+	let g:lightline.ctrlp_next = a:next
+	return lightline#statusline(0)
 endfunction
 
 function! CtrlPStatusFunc_2(str)
-  return lightline#statusline(0)
+	return lightline#statusline(0)
 endfunction
 
 "augroup AutoSyntastic
@@ -299,19 +299,19 @@ noremap <C-k> :Gtags -r <C-r><C-w><CR>
 " QuickRun
 "-------------------------------------------------
 let g:quickrun_config = {
-\	"_" : {
-\		"outputter/buffer/split"	: "rightbelow 8sp",
-\	},
-\
-\}
+			\	"_" : {
+			\		"outputter/buffer/split"	: "rightbelow 8sp",
+			\	},
+			\
+			\}
 let g:quickrun_config["c/watchdogs_checker"] = {
-	\	"type" : "watchdogs_checker/gcc",
-	\	"cmdopt" : "-Wall",
-	\}
+			\	"type" : "watchdogs_checker/gcc",
+			\	"cmdopt" : "-Wall",
+			\}
 let g:quickrun_config["cpp/watchdogs_checker"] = {
-	\	"type" : "watchdogs_checker/g++",
-	\	"cmdopt" : "-Wall",
-	\}
+			\	"type" : "watchdogs_checker/g++",
+			\	"cmdopt" : "-Wall",
+			\}
 nnoremap <Leader>r		:<C-u>QuickRun<CR>
 
 "-------------------------------------------------
