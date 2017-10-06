@@ -302,13 +302,28 @@ let g:quickrun_config = {
 \	"_" : {
 \		"outputter/buffer/split"	: "rightbelow 8sp",
 \	},
+\
 \}
+let g:quickrun_config["c/watchdogs_checker"] = {
+	\	"type" : "watchdogs_checker/gcc",
+	\	"cmdopt" : "-Wall",
+	\}
+let g:quickrun_config["cpp/watchdogs_checker"] = {
+	\	"type" : "watchdogs_checker/g++",
+	\	"cmdopt" : "-Wall",
+	\}
 nnoremap <Leader>r		:<C-u>QuickRun<CR>
 
 "-------------------------------------------------
 " watchdogs
 "-------------------------------------------------
-nmap [MyPrefix]w :WatchdogsRun<CR>:cc<CR>
+
+nnoremap [MyPrefix]w :WatchdogsRun<CR>:cc<CR>
+
+let g:watchdogs_check_BufWritePost_enables = {
+			\	"c"       : 1,
+			\	"cpp"     : 1
+			\}
 
 "-------------------------------------------------
 " vim-hier
