@@ -132,6 +132,7 @@ nnoremap [MyPrefix]ga		:Gwrite<CR>
 nnoremap [MyPrefix]gr		:Gread<CR>
 nnoremap [MyPrefix]gc		:Gcommit<CR>
 nnoremap [MyPrefix]gb		:Gblame<CR>
+nnoremap [MyPrefix]gg		:Git 
 
 "-------------------------------------------------
 " t9md/vim-quickhl
