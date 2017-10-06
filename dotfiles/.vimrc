@@ -126,6 +126,7 @@ hi link EasyMotionTarget2Second Search
 " tpope/vim-fugitive
 "-------------------------------------------------
 nnoremap [MyPrefix]gs		:Gstatus<CR>
+nnoremap [MyPrefix]gl		:Glog<CR>:copen<CR>
 nnoremap [MyPrefix]gd		:Gdiff<CR>
 nnoremap [MyPrefix]gD		:Gdiff HEAD<CR>
 nnoremap [MyPrefix]ga		:Gwrite<CR>
