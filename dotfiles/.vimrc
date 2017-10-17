@@ -112,6 +112,15 @@ NeoBundleCheck
 "
 
 "-------------------------------------------------
+" netrw
+"-------------------------------------------------
+nnoremap [MyPrefix]n		:e .<CR>
+nnoremap [MyPrefix]N		:e %:h<CR>
+let g:netrw_liststyle = 3 " show as tree style. Tips: type i to switch liststyle on netrw
+let g:netrw_altv = 1 " open file at right side
+let g:netrw_alto = 1 " open file at lower side
+
+"-------------------------------------------------
 " Lokaltog/vim-easymotion
 "-------------------------------------------------
 let g:EasyMotion_leader_key = '<Leader>'
