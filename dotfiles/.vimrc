@@ -116,7 +116,10 @@ NeoBundleCheck
 "-------------------------------------------------
 nnoremap [MyPrefix]n		:e .<CR>
 nnoremap [MyPrefix]N		:e %:h<CR>
-let g:netrw_liststyle = 3 " show as tree style. Tips: type i to switch liststyle on netrw
+let g:netrw_liststyle = 3	" show as tree style. Tips: type i to switch liststyle on netrw
+let g:netrw_sizestyle = 'H' " show file size as human readable style
+"let g:netrw_preview = 1		" open preview window vertically
+"let g:netrw_winsize = 30	" open preview window vertically
 let g:netrw_altv = 1 " open file at right side
 let g:netrw_alto = 1 " open file at lower side
 
@@ -175,22 +178,23 @@ let g:quickhl_manual_colors = [
 			\ ]
 
 "-------------------------------------------------
-" ctrlp
+" ctrlpvim/ctrlp.vim
 "-------------------------------------------------
 let g:ctrlp_map = '<Nop>'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_working_path_mode = 'a'
-nnoremap [MyPrefix]b		:<C-u>CtrlPBuffer<CR>
+nnoremap [MyPrefix]pb		:<C-u>CtrlPBuffer<CR>
 "nnoremap [MyPrefix]f		:<C-u>CtrlP<CR>
-nnoremap [MyPrefix]f		:<C-u>CtrlPCurWD<CR>
-nnoremap [MyPrefix]F		:<C-u>CtrlPCurFile<CR>
-nnoremap [MyPrefix]d		:<C-u>CtrlPDir<CR>
+nnoremap [MyPrefix]pf		:<C-u>CtrlPCurWD<CR>
+nnoremap [MyPrefix]pF		:<C-u>CtrlPCurFile<CR>
+nnoremap [MyPrefix]pd		:<C-u>CtrlPDir<CR>
 "nnoremap [MyPrefix]D		:<C-u>CtrlPCurWD<CR>
-"nnoremap [MyPrefix]mf		:<C-u>CtrlPMRUFiles<CR>
-nnoremap [MyPrefix]vd		:<C-u>CtrlPBookmarkDir<CR>
-nnoremap [MyPrefix]vD		:<C-u>CtrlPBookmarkDirAdd<CR>
-nnoremap [MyPrefix]l		:<C-u>CtrlPLine<CR>
-nnoremap [MyPrefix]q		:<C-u>CtrlPQuickfix<CR>
+nnoremap [MyPrefix]pm		:<C-u>CtrlPMRUFiles<CR>
+"nnoremap [MyPrefix]vd		:<C-u>CtrlPBookmarkDir<CR>
+"nnoremap [MyPrefix]vD		:<C-u>CtrlPBookmarkDirAdd<CR>
+nnoremap [MyPrefix]pl		:<C-u>CtrlPLine<CR>
+nnoremap [MyPrefix]pq		:<C-u>CtrlPQuickfix<CR>
+nnoremap [MyPrefix]px		:<C-u>CtrlPMixed<CR>
 
 "-------------------------------------------------
 " itchyny/lightline.vim
