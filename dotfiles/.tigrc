@@ -1,0 +1,52 @@
+# ref: https://github.com/jonas/tig/blob/master/tigrc
+
+# -------------------------------------
+# View setting
+# -------------------------------------
+#set blame-view	= date:default author:full file-name:auto id:yes,color line-number:no,interval=5 text
+set blame-view	= date:default author:full file-name:auto id:yes,color line-number:yes,interval=1 text
+#set grep-view	= file-name:no line-number:yes,interval=1 text
+#set main-view	= line-number:no,interval=5 id:no date:default author:full commit-title:yes,graph,refs,overflow=no
+set main-view	= line-number:no,interval=5 id:yes date:default author:full commit-title:yes,graph,refs,overflow=no
+#set refs-view	= line-number:no id:no date:default author:full ref commit-title
+set refs-view	= line-number:no id:yes date:default author:full ref commit-title
+#set stash-view	= line-number:no,interval=5 id:no date:default author:full commit-title
+#set status-view	= line-number:no,interval=5 status:short file-name
+#set tree-view	= line-number:no,interval=5 mode author:full file-size date:default id:no file-name
+
+# -------------------------------------
+# Pager based views
+# -------------------------------------
+#set pager-view	= line-number:no,interval=5 text
+#set stage-view	= line-number:no,interval=5 text
+#set log-view	= line-number:no,interval=5 text
+set blob-view	= line-number:yes,interval=1 text
+#set diff-view	= line-number:no,interval=5 text:yes,commit-title-overflow=no
+set diff-view	= line-number:yes,interval=1 text:yes,commit-title-overflow=no
+
+# -------------------------------------
+# UI display settings
+# -------------------------------------
+#set show-changes		= yes		# Show changes commits in the main view?
+#set wrap-lines			= no		# Wrap long lines in pager views?
+#set tab-size			= 8		# Number of spaces to use when expanding tabs
+set tab-size			= 4		# Number of spaces to use when expanding tabs
+#set line-graphics		= default	# Enum: ascii, default, utf-8
+#set truncation-delimiter	= ~		# Character drawn for truncations, or "utf-8"
+
+# -------------------------------------
+# Settings controlling how content is read from Git
+# -------------------------------------
+#set main-options		= -n 1000
+
+# -------------------------------------
+# Misc
+# -------------------------------------
+#set wrap-search			= yes
+
+# -------------------------------------
+# Cursor navigation
+# -------------------------------------
+bind generic	<C-F>	move-page-down
+bind generic	<C-B>	move-page-up
+
