@@ -327,14 +327,14 @@ let g:quickrun_config["cpp/watchdogs_checker"] = {
 			\}
 " FIXME: This settings for Java doesn't work as I expected. Sometimes it shows
 " the result of check but it does not work always.
-let g:quickrun_config["java/watchdogs_checker"] = {
-			\	"type" : "watchdogs_checker/javac",
-			\   'cmdopt': join([
-			\       '-Xlint:all',
-			\       '-deprecation',
-			\   ]),
-			\	"exec" : "%c %o %s:p",
-			\}
+"let g:quickrun_config["java/watchdogs_checker"] = {
+"			\	"type" : "watchdogs_checker/javac",
+"			\   'cmdopt': join([
+"			\       '-Xlint:all',
+"			\       '-deprecation',
+"			\   ]),
+"			\	"exec" : "%c %o %s:p",
+"			\}
 nnoremap [MyPrefix]r	:<C-u>QuickRun<CR>
 
 "-------------------------------------------------
@@ -345,8 +345,7 @@ nnoremap [MyPrefix]w :WatchdogsRun<CR>:cc<CR>
 
 let g:watchdogs_check_BufWritePost_enables = {
 			\	"c"       : 1,
-			\	"cpp"     : 1,
-			\	"java"    : 1
+			\	"cpp"     : 1
 			\}
 
 "-------------------------------------------------
