@@ -423,9 +423,9 @@ set foldlevel=99
 set clipboard^=autoselect
 
 set pastetoggle=<F12>
-au InsertLeave * set nopaste
+autocmd InsertLeave * set nopaste
 
-au BufNewFile,BufRead *.md :set filetype=markdown
+autocmd BufNewFile,BufRead *.md :set filetype=markdown
 
 if has('mouse')
 	set mouse=a
@@ -471,7 +471,7 @@ set tags+=./tags;
 " Go
 "-------------------------------------------------
 set rtp+=$GOROOT/misc/vim
-auto BufWritePre *.go Fmt
+autocmd BufWritePre *.go Fmt
 
 " go get github.com/nsf/gocode/
 exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
