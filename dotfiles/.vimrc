@@ -364,8 +364,8 @@ let g:hier_highlight_group_loci = 'SpellRare'
 "-------------------------------------------------
 " astyle
 "-------------------------------------------------
-autocmd BufWritePost *.c	:%!astyle
-autocmd BufWritePost *.cpp	:%!astyle
+"autocmd BufWritePost *.c	:%!astyle
+"autocmd BufWritePost *.cpp	:%!astyle
 
 "-------------------------------------------------
 " General
