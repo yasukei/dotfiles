@@ -191,6 +191,7 @@ nnoremap [MyPrefix]fl		:Lines<CR>
 nnoremap [MyPrefix]fL		:BLines<CR>
 nnoremap [MyPrefix]fc		:Commits<CR>
 nnoremap [MyPrefix]fC		:BCommits<CR>
+nnoremap [MyPrefix]fs		:Snippets<CR>
 
 "-------------------------------------------------
 " SirVer/ultisnips
