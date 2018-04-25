@@ -182,6 +182,13 @@ let g:quickhl_manual_colors = [
 " junegunn/fzf.vim
 "-------------------------------------------------
 set rtp+=~/.fzf
+nnoremap [MyPrefix]fb		:Buffers<CR>
+nnoremap [MyPrefix]ff		:Files<CR>
+nnoremap [MyPrefix]fa		:Ag 
+nnoremap [MyPrefix]fl		:Lines<CR>
+nnoremap [MyPrefix]fL		:BLines<CR>
+nnoremap [MyPrefix]fc		:Commits<CR>
+nnoremap [MyPrefix]fC		:BCommits<CR>
 
 "-------------------------------------------------
 " ctrlpvim/ctrlp.vim
