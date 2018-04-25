@@ -66,6 +66,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 "NeoBundle 'kien/ctrlp.vim'
 "NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'junegunn/fzf.vim'
 NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-unimpaired'
@@ -74,7 +75,7 @@ NeoBundle 't9md/vim-quickhl'
 NeoBundle 'itchyny/lightline.vim'
 "Bundle 'gtags.vim' " install manually gtags.vim version 0.6.4 or later from GNU GLOBAL share directory
 NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'rking/ag.vim'
+"NeoBundle 'rking/ag.vim'
 NeoBundle 'godlygeek/csapprox'
 
 NeoBundle 'Shougo/vimproc.vim', {
@@ -176,6 +177,11 @@ let g:quickhl_manual_colors = [
 			\ "gui=bold ctermfg=7   ctermbg=187   guibg=#0a7383 guifg=#ffffff",
 			\ "gui=bold ctermfg=7   ctermbg=217   guibg=#0a7383 guifg=#ffffff",
 			\ ]
+
+"-------------------------------------------------
+" junegunn/fzf.vim
+"-------------------------------------------------
+set rtp+=~/.fzf
 
 "-------------------------------------------------
 " ctrlpvim/ctrlp.vim
