@@ -67,6 +67,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "NeoBundle 'kien/ctrlp.vim'
 "NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'junegunn/fzf.vim'
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'honza/vim-snippets'
 NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-unimpaired'
@@ -189,6 +191,13 @@ nnoremap [MyPrefix]fl		:Lines<CR>
 nnoremap [MyPrefix]fL		:BLines<CR>
 nnoremap [MyPrefix]fc		:Commits<CR>
 nnoremap [MyPrefix]fC		:BCommits<CR>
+
+"-------------------------------------------------
+" SirVer/ultisnips
+"-------------------------------------------------
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 "-------------------------------------------------
 " ctrlpvim/ctrlp.vim
