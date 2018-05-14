@@ -69,6 +69,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'junegunn/fzf.vim'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
+NeoBundle 'mileszs/ack.vim'
 NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-unimpaired'
@@ -192,6 +193,7 @@ nnoremap [MyPrefix]fL		:BLines<CR>
 nnoremap [MyPrefix]fc		:Commits<CR>
 nnoremap [MyPrefix]fC		:BCommits<CR>
 nnoremap [MyPrefix]fs		:Snippets<CR>
+nnoremap [MyPrefix]fa       :Ag <C-r><C-w><CR>
 
 "-------------------------------------------------
 " SirVer/ultisnips
@@ -199,6 +201,15 @@ nnoremap [MyPrefix]fs		:Snippets<CR>
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+"-------------------------------------------------
+" ack.vim
+"-------------------------------------------------
+if executable('ag')
+let g:ackprg = 'ag --vimgrep'
+endif
+
+nnoremap [MyPrefix]ag       :Ack <C-r><C-w><CR>
 
 "-------------------------------------------------
 " ctrlpvim/ctrlp.vim
