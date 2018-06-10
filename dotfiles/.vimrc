@@ -322,14 +322,14 @@ let g:quickrun_config = {
 			\	},
 			\
 			\}
-let g:quickrun_config["c/watchdogs_checker"] = {
-			\	"type" : "watchdogs_checker/gcc",
-			\	"cmdopt" : "-Wall -Wextra",
-			\}
-let g:quickrun_config["cpp/watchdogs_checker"] = {
-			\	"type" : "watchdogs_checker/g++",
-			\	"cmdopt" : "-Wall -Wextra",
-			\}
+"let g:quickrun_config["c/watchdogs_checker"] = {
+"			\	"type" : "watchdogs_checker/gcc",
+"			\	"cmdopt" : "-Wall -Wextra",
+"			\}
+"let g:quickrun_config["cpp/watchdogs_checker"] = {
+"			\	"type" : "watchdogs_checker/g++",
+"			\	"cmdopt" : "-Wall -Wextra",
+"			\}
 " FIXME: This settings for Java doesn't work as I expected. Sometimes it shows
 " the result of check but it does not work always.
 "let g:quickrun_config["java/watchdogs_checker"] = {
@@ -348,10 +348,10 @@ nnoremap [MyPrefix]r	:<C-u>QuickRun<CR>
 
 nnoremap [MyPrefix]w :WatchdogsRun<CR>:cc<CR>
 
-let g:watchdogs_check_BufWritePost_enables = {
-			\	"c"       : 1,
-			\	"cpp"     : 1
-			\}
+"let g:watchdogs_check_BufWritePost_enables = {
+"			\	"c"       : 1,
+"			\	"cpp"     : 1
+"			\}
 
 "-------------------------------------------------
 " vim-hier
