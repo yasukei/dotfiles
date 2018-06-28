@@ -143,6 +143,7 @@ hi link EasyMotionTarget2Second Search
 "-------------------------------------------------
 nnoremap [MyPrefix]gs		:Gstatus<CR>
 nnoremap [MyPrefix]gl		:Glog<CR>:copen<CR>
+nnoremap [MyPrefix]gL       :Gllog<CR>:copen<CR>
 nnoremap [MyPrefix]gd		:Gdiff<CR>
 nnoremap [MyPrefix]gD		:Gdiff HEAD<CR>
 nnoremap [MyPrefix]ga		:Gwrite<CR>
@@ -467,6 +468,19 @@ nnoremap [MyPrefix]mt		:copen<CR>:make test<CR><CR>
 nnoremap [MyPrefix]mT		:copen<CR>:make test<CR><CR>:cla<CR>
 nnoremap [MyPrefix]ml		:copen<CR>:make lcov<CR><CR>
 nnoremap [MyPrefix]mc		:copen<CR>:make clean<CR><CR>
+
+nnoremap [MyPrefix]dt       :<C-u>windo diffthis<CR>
+nnoremap [MyPrefix]do       :<C-u>windo diffoff<CR>
+
+nnoremap [MyPrefix]co       :<C-u>copen<CR>
+nnoremap [MyPrefix]cc       :<C-u>cclose<CR>
+nnoremap [MyPrefix]cn       :<C-u>cnext<CR>
+nnoremap [MyPrefix]cp       :<C-u>cprev<CR>
+
+nnoremap [MyPrefix]lo       :<C-u>lopen<CR>
+nnoremap [MyPrefix]lc       :<C-u>lclose<CR>
+nnoremap [MyPrefix]ln       :<C-u>lnext<CR>
+nnoremap [MyPrefix]lp       :<C-u>prev<CR>
 
 "-------------------------------------------------
 " ctags
