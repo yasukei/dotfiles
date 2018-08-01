@@ -482,6 +482,8 @@ nnoremap [MyPrefix]lc       :<C-u>lclose<CR>
 nnoremap [MyPrefix]ln       :<C-u>lnext<CR>
 nnoremap [MyPrefix]lp       :<C-u>prev<CR>
 
+nnoremap [MyPrefix]vm       :<C-u>e ~/.vimrc<CR>
+
 "-------------------------------------------------
 " ctags
 "-------------------------------------------------
