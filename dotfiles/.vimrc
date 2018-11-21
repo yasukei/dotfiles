@@ -78,6 +78,7 @@ NeoBundle 't9md/vim-quickhl'
 NeoBundle 'itchyny/lightline.vim'
 "Bundle 'gtags.vim' " install manually gtags.vim version 0.6.4 or later from GNU GLOBAL share directory
 NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'fatih/vim-go'
 "NeoBundle 'rking/ag.vim'
 NeoBundle 'godlygeek/csapprox'
 
@@ -490,11 +491,15 @@ nnoremap [MyPrefix]vm       :<C-u>e ~/.vimrc<CR>
 set tags+=./tags;
 
 "-------------------------------------------------
-" Go
+" golang
 "-------------------------------------------------
-set rtp+=$GOROOT/misc/vim
-autocmd BufWritePre *.go Fmt
+"set rtp+=$GOROOT/misc/vim
+"autocmd BufWritePre *.go Fmt
 
 " go get github.com/nsf/gocode/
-exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
+"exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
+nnoremap [MyPrefix]gb       :<C-u>GoBuild<CR>
+nnoremap [MyPrefix]gt       :<C-u>GoTest<CR>
+nnoremap [MyPrefix]gT       :<C-u>GoTestFunc<CR>
+nnoremap [MyPrefix]gr       :<C-u>GoRun<CR>
 
