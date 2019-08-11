@@ -498,8 +498,8 @@ set tags+=./tags;
 
 " go get github.com/nsf/gocode/
 "exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
-nnoremap [MyPrefix]gb       :<C-u>GoBuild<CR>
-nnoremap [MyPrefix]gt       :<C-u>GoTest<CR>
-nnoremap [MyPrefix]gT       :<C-u>GoTestFunc<CR>
-nnoremap [MyPrefix]gr       :<C-u>GoRun<CR>
+nnoremap [MyPrefix]gob       :<C-u>GoBuild<CR>
+nnoremap [MyPrefix]got       :<C-u>GoTest<CR>
+nnoremap [MyPrefix]goT       :<C-u>GoTestFunc<CR>
+nnoremap [MyPrefix]gor       :<C-u>GoRun<CR>
 
