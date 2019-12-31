@@ -11,7 +11,7 @@ do
 	[ "$f" = ".git" ] && continue
 
 	# concatenate '.cat' suffix files
-	[[ "$f" =~ .*\.cat ]] && cat `pwd`/"$f" >> "$HOME"/"${f%.cat}"; continue
+	[[ "$f" =~ .*\.cat ]] && cat `pwd`/"$f" >> "$HOME"/"${f%.cat}" && continue
 
 	ln -snfv `pwd`/"$f" "$HOME"/"$f"
 done
