@@ -2,7 +2,7 @@
 
 current_dir=`pwd`
 
-cd apt-get
+cd apt
 bash INSTALL.sh
 cd "$current_dir"
 
