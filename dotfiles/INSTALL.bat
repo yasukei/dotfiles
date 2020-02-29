@@ -7,3 +7,4 @@ mklink /D %HOMEPATH%\.vim %cd%\.vim
 mklink %HOMEPATH%\.gitconfig %cd%\.gitconfig
 mklink %HOMEPATH%\.gitignore %cd%\.gitignore
 
+pause
