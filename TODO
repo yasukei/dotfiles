@@ -16,8 +16,6 @@
 #	}
 # 
 
-# golang
-
 # Spin
 # Spin needs bison
 # sudo apt-get install bison
@@ -28,8 +26,3 @@
 # cd Spin/Src*
 # make
 
-# gtest/gmock
-# wget https://googlemock.googlecode.com/files/gmock-1.6.0.zip
-# mv gmock-1.6.0.zip ~/bin/
-# cd ~/bin/
-# unzip gmock-1.6.0.zip
