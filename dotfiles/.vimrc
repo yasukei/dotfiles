@@ -48,72 +48,78 @@
 " 	:%!xxd -g 1		# delimited 1 byte
 
 "-------------------------------------------------
-" NeoBundle
+" dein.vim
 "-------------------------------------------------
-if has('vim_starting')
-	set nocompatible               " Be iMproved
-
-	" Required:
-	set runtimepath+=~/.vim/bundle/neobundle.vim/
+if &compatible
+  set nocompatible               " Be iMproved
 endif
 
 " Required:
-call neobundle#begin(expand('~/.vim/bundle'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-"NeoBundle 'kien/ctrlp.vim'
-"NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'junegunn/fzf.vim'
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'honza/vim-snippets'
-NeoBundle 'mileszs/ack.vim'
-NeoBundle 'tpope/vim-fugitive'
-"NeoBundle 'tpope/vim-repeat'
-NeoBundle 'tpope/vim-unimpaired'
-NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 't9md/vim-quickhl'
-NeoBundle 'itchyny/lightline.vim'
-"Bundle 'gtags.vim' " install manually gtags.vim version 0.6.4 or later from GNU GLOBAL share directory
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'fatih/vim-go'
-"NeoBundle 'rking/ag.vim'
-NeoBundle 'godlygeek/csapprox'
-
-NeoBundle 'Shougo/vimproc.vim', {
-			\ 'build' : {
-			\     'windows' : 'tools\\update-dll-mingw',
-			\     'cygwin' : 'make -f make_cygwin.mak',
-			\     'mac' : 'make -f make_mac.mak',
-			\     'linux' : 'make',
-			\     'unix' : 'gmake',
-			\    },
-			\ }
-NeoBundle "osyo-manga/shabadou.vim"
-NeoBundle "osyo-manga/vim-watchdogs"
-NeoBundle "cohama/vim-hier"
-
-" colorscheme
-NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'google/vim-colorscheme-primary'
-
-" You can specify revision/branch/tag.
-"NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-call neobundle#end()
+if dein#load_state('~/.cache/dein')
+  call dein#begin('~/.cache/dein')
+
+  " Let dein manage dein
+  " Required:
+  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+  " Add or remove your plugins here like this:
+  "call dein#add('Shougo/neosnippet.vim')
+  "call dein#add('Shougo/neosnippet-snippets')
+
+  call dein#add('junegunn/fzf.vim')
+  call dein#add('SirVer/ultisnips')
+  call dein#add('honza/vim-snippets')
+  call dein#add('mileszs/ack.vim')
+  call dein#add('tpope/vim-fugitive')
+  call dein#add('Lokaltog/vim-easymotion')
+  call dein#add('t9md/vim-quickhl')
+  call dein#add('itchyny/lightline.vim')
+  call dein#add('thinca/vim-quickrun')
+  call dein#add('fatih/vim-go')
+
+	" colorscheme
+  call dein#add('flazz/vim-colorschemes')
+  call dein#add('nanotech/jellybeans.vim')
+  call dein#add('w0ng/vim-hybrid')
+  call dein#add('google/vim-colorscheme-primary')
+
+  " 'gtags.vim' " install manually gtags.vim version 0.6.4 or later from GNU GLOBAL share directory
+
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
 
 " Required:
 filetype plugin indent on
+syntax enable
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
-"End NeoBundle Scripts-------------------------
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
+
+" old plugins used in the past
+"	"NeoBundle 'tpope/vim-repeat'
+"	"NeoBundle 'tpope/vim-unimpaired'
+	"NeoBundle 'rking/ag.vim'
+"	NeoBundle 'godlygeek/csapprox'
+"
+"	NeoBundle 'Shougo/vimproc.vim', {
+"				\ 'build' : {
+"				\     'windows' : 'tools\\update-dll-mingw',
+"				\     'cygwin' : 'make -f make_cygwin.mak',
+"				\     'mac' : 'make -f make_mac.mak',
+"				\     'linux' : 'make',
+"				\     'unix' : 'gmake',
+"				\    },
+"				\ }
+"	NeoBundle "osyo-manga/shabadou.vim"
+"	NeoBundle "osyo-manga/vim-watchdogs"
+"	NeoBundle "cohama/vim-hier"
 "
 
 "-------------------------------------------------
