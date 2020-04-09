@@ -498,6 +498,8 @@ set tags+=./tags;
 
 " go get github.com/nsf/gocode/
 "exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
+
+let g:go_fmt_command = "goimports"
 nnoremap [MyPrefix]gob       :<C-u>GoBuild<CR>
 nnoremap [MyPrefix]got       :<C-u>GoTest<CR>
 nnoremap [MyPrefix]goT       :<C-u>GoTestFunc<CR>
