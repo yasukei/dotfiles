@@ -84,7 +84,6 @@ if dein#load_state('~/.cache/dein')
   call dein#add('flazz/vim-colorschemes')
   call dein#add('nanotech/jellybeans.vim')
   call dein#add('w0ng/vim-hybrid')
-  call dein#add('google/vim-colorscheme-primary')
 
   " 'gtags.vim' " install manually gtags.vim version 0.6.4 or later from GNU GLOBAL share directory
 
