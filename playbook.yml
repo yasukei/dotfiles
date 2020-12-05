@@ -1,0 +1,32 @@
+- hosts: localhost
+  user: root
+  tasks:
+  - name: install apt packages
+    apt:
+      name:
+        - astyle
+        - binutils
+        - bpython
+        - byobu
+        - cmake
+        - curl
+        - g++
+        - git
+        - golang
+        - google-perftools
+        - kcachegrind
+        - lcov
+        - libboost-all-dev
+        - libgoogle-perftools-dev
+        - libicu-dev
+        - libncurses-dev
+        - net-tools
+        - nmap
+        - openssh-server
+        - pv
+        - python-dev
+        - silversearcher-ag
+        - subversion
+        - tig
+        - vim-gtk
+
