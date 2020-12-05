@@ -1,5 +1,5 @@
 - hosts: localhost
-  user: root
+  become: yes
   tasks:
   - name: install apt packages
     apt:
@@ -30,4 +30,19 @@
         - subversion
         - tig
         - vim-gtk
+
+  - name: make symbolic link for dotfiles
+    file:
+      src: "/home/yasukei/git/dotfiles/dotfiles/{{ item }}"
+      dest: "/home/yasukei/{{ item }}"
+      state: link
+    loop:
+      - .astylerc
+      - .ctags
+      - .gitconfig
+      - .gitignore
+      - _gvimrc
+      - .tigrc
+      - .vim
+      - .vimrc
 
