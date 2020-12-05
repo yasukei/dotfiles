@@ -3,6 +3,7 @@
   tasks:
   - name: install apt packages
     apt:
+      update_cache: yes
       name:
         - astyle
         - binutils
