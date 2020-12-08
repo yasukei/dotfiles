@@ -1,7 +1,10 @@
 - hosts: localhost
   become: yes
   tasks:
-  - name: install apt packages
+  - name: debug info
+    debug: var=ansible_env.HOME
+
+  - name: Install apt packages
     apt:
       update_cache: yes
       name:
@@ -31,16 +34,21 @@
         - tig
         - vim-gtk
 
-  - name: debug for current user
-    debug: var=ansible_env.HOME
+  - name: Install Go
+    shell: |
+      [ -d /usr/local/go ] && exit 0
+      VERSION=1.15
+      OS=linux
+      ARCH=amd64
+      sudo curl https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz | tar -C /usr/local -xz
 
 - hosts: localhost
   become_user: yasukei
   tasks:
-  - name: debug for current user
+  - name: debug info
     debug: var=ansible_env.HOME
 
-  - name: make symbolic link for dotfiles
+  - name: Make symbolic link for dotfiles
     file:
       src: "~/git/dotfiles/dotfiles/{{ item }}"
       dest: "~/{{ item }}"
@@ -55,21 +63,13 @@
       - .vim
       - .vimrc
 
-  - name: Insert environment variables to .profile
-    blockinfile:
-      path: "~/.profile"
-      insertafter: EOF
-      block: |
-        export PATH=$PATH:/usr/local/go/bin
-        export GOPATH=~/go
-
   - name: Install dein.vim
     shell: |
       [ -d ~/.cache/dein ] && exit 0
       curl -o installer.sh https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh &&
       sh ./installer.sh ~/.cache/dein &&
       rm ./installer.sh
- 
+
   - name: Install fzf
     shell: |
       [ -d ~/.fzf ] && exit 0
@@ -89,4 +89,17 @@
       sudo make install &&
       cp gtags.vim ~/.vim/plugin/ &&
       touch INSTALLED_BY_ANSIBLE
+
+  - name: Make Go environment. Prepare environment variables
+    blockinfile:
+      path: "~/.profile"
+      insertafter: EOF
+      block: |
+        export PATH=$PATH:/usr/local/go/bin
+        export GOPATH=~/go
+
+  - name: Make Go environment. Create a directory
+    file:
+      path: ~/go/src/github.com/{{ ansible_env.USER }}
+      state: directory
 
