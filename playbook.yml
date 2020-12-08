@@ -1,5 +1,5 @@
 - hosts: localhost
-  become: yes
+  #become: yes
   tasks:
   - name: install apt packages
     apt:
@@ -45,4 +45,12 @@
       - .tigrc
       - .vim
       - .vimrc
+
+  - name: Insert environment variables to .profile
+    blockinfile:
+      path: "/home/yasukei/.profile"
+      insertafter: EOF
+      block: |
+        export PATH=$PATH:/usr/local/go/bin
+        export GOPATH=~/go
 
