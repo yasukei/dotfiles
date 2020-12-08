@@ -54,3 +54,9 @@
         export PATH=$PATH:/usr/local/go/bin
         export GOPATH=~/go
 
+  - name: Install dein.vim
+    shell: |
+      curl -o installer.sh https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh
+      sh ./installer.sh ~/.cache/dein
+      rm ./installer.sh
+
