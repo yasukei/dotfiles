@@ -11,15 +11,15 @@ cat ~/.ssh/id_isa.pub
 ```
 
 ## Main
-Probably you could copy & paste the following commands in terminal to execute.
+Copy, paste and execute the following commands in terminal
 ```
 sudo apt update
-sudo apt install -y git
+sudo apt install -y git ansible
 mkdir -p ~/git
 cd ~/git
 git clone git@github.com:yasukei/dotfiles.git
 cd ~/git/dotfiles
-bash INSTALL.sh
+ansible-playbook  playbook.yml
 ```
 
 # reference
