@@ -36,11 +36,13 @@
 
   - name: Install Go
     shell: |
-      [ -d /usr/local/go ] && exit 0
+      [ -d /usr/local/go ] && echo 'Go is already installed' && exit 0
       VERSION=1.15
       OS=linux
       ARCH=amd64
       sudo curl https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz | tar -C /usr/local -xz
+    register: result
+    changed_when: "'Go is already installed' not in result.stdout"
 
 - hosts: localhost
   become_user: yasukei
@@ -65,21 +67,25 @@
 
   - name: Install dein.vim
     shell: |
-      [ -d ~/.cache/dein ] && exit 0
+      [ -d ~/.cache/dein ] && echo 'dein.vim is already installed' && exit 0
       curl -o installer.sh https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh &&
       sh ./installer.sh ~/.cache/dein &&
       rm ./installer.sh
+    register: result
+    changed_when: "'dein.vim is already installed' not in result.stdout"
 
   - name: Install fzf
     shell: |
-      [ -d ~/.fzf ] && exit 0
+      [ -d ~/.fzf ] && echo 'fzf is already installed' && exit 0
       git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf &&
       ~/.fzf/install
+    register: result
+    changed_when: "'fzf is already installed' not in result.stdout"
 
   - name: Install GNU Global
     shell: |
       TARGET=global-6.6.5
-      [ -f ~/bin/"$TARGET"/INSTALLED_BY_ANSIBLE ] && exit 0
+      [ -f ~/bin/"$TARGET"/INSTALLED_BY_ANSIBLE ] && echo 'GNU Global is already installed' && exit 0
       mkdir -p ~/bin
       cd ~/bin &&
       curl ftp://ftp.gnu.org/pub/gnu/global/"$TARGET".tar.gz > "$TARGET".tar.gz &&
@@ -89,6 +95,8 @@
       sudo make install &&
       cp gtags.vim ~/.vim/plugin/ &&
       touch INSTALLED_BY_ANSIBLE
+    register: result
+    changed_when: "'GNU Global is already installed' not in result.stdout"
 
   - name: Make Go environment. Prepare environment variables
     blockinfile:
