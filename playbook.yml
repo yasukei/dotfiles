@@ -1,5 +1,5 @@
 - hosts: localhost
-  #become: yes
+  become: yes
   tasks:
   - name: install apt packages
     apt:
@@ -31,10 +31,19 @@
         - tig
         - vim-gtk
 
+  - name: debug for current user
+    debug: var=ansible_env.HOME
+
+- hosts: localhost
+  become_user: yasukei
+  tasks:
+  - name: debug for current user
+    debug: var=ansible_env.HOME
+
   - name: make symbolic link for dotfiles
     file:
-      src: "/home/yasukei/git/dotfiles/dotfiles/{{ item }}"
-      dest: "/home/yasukei/{{ item }}"
+      src: "~/git/dotfiles/dotfiles/{{ item }}"
+      dest: "~/{{ item }}"
       state: link
     loop:
       - .astylerc
@@ -48,7 +57,7 @@
 
   - name: Insert environment variables to .profile
     blockinfile:
-      path: "/home/yasukei/.profile"
+      path: "~/.profile"
       insertafter: EOF
       block: |
         export PATH=$PATH:/usr/local/go/bin
@@ -59,4 +68,8 @@
       curl -o installer.sh https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh
       sh ./installer.sh ~/.cache/dein
       rm ./installer.sh
+ 
+  - name: Install fzf
+    shell: |
+      [ -d ~/.fzf ] || git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 
