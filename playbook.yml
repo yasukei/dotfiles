@@ -45,7 +45,7 @@
     register: result
     changed_when: "'Go is already installed' not in result.stdout"
 
-  - name: Install docker
+  - name: Install Docker
     shell: |
       docker --version && exit 0
       sudo apt-get update
