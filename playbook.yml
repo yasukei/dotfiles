@@ -66,6 +66,14 @@
     register: result
     changed_when: "'Docker' not in result.stdout"
 
+  - name: Install Docker Compose
+    shell: |
+      docker-compose --version && exit 0
+      sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+      sudo chmod +x /usr/local/bin/docker-compose
+    register: result
+    changed_when: "'docker-compose' not in result.stdout"
+
 - hosts: localhost
   become_user: yasukei
   tasks:
