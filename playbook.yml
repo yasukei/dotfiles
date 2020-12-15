@@ -14,6 +14,7 @@
         - byobu
         - cmake
         - curl
+        - docker
         - g++
         - git
         - golang
@@ -43,6 +44,27 @@
       sudo curl https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz | tar -C /usr/local -xz
     register: result
     changed_when: "'Go is already installed' not in result.stdout"
+
+  - name: Install docker
+    shell: |
+      docker --version && exit 0
+      sudo apt-get update
+      sudo apt-get install -y \
+        apt-transport-https \
+        ca-certificates \
+        curl \
+        gnupg-agent \
+        software-properties-common
+      curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+      sudo apt-key fingerprint 0EBFCD88
+      sudo add-apt-repository \
+        "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+        $(lsb_release -cs) \
+        stable"
+      sudo apt-get update
+      sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+    register: result
+    changed_when: "'Docker' not in result.stdout"
 
 - hosts: localhost
   become_user: yasukei
